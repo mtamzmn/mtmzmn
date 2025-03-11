@@ -1,9 +1,16 @@
 [
     {
-        "food_name": "\u0645\u0637\u0628\u0642",
+        "food_name": "مطبق",
         "images": "https:\/\/i.postimg.cc\/MHKn4v0p\/1740780753493.jpg",
         "price": "20",
-        "category": "\u0645\u0637\u0628\u0642",
+        "category": "مطبق",
         "timestamp": "2025-03-11 17:42:38"
+    },
+    {
+        "food_name": "سلته",
+        "images": "https:\/\/i.postimg.cc\/C5PRVSJH\/download.jpg",
+        "price": "15",
+        "category": "اصناف مميزة",
+        "timestamp": "2025-03-11 17:44:55"
     }
 ]
