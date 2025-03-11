@@ -2,15 +2,22 @@
     {
         "id": "36",
         "images": "https:\/\/i.postimg.cc\/9Xtybd5q\/1740780789282.jpg",
-        "category": "\u0648\u062c\u0628\u0627\u062a \u0645\u0646\u0648\u0639\u0629",
-        "food_name": "\u0627\u0633\u0645 \u0627\u0644\u0648\u062c\u0628\u0629",
+        "category": "وجبات منوعة",
+        "food_name": "اسم الوجبة",
         "price": "1000000"
     },
     {
         "id": "37",
         "images": "https:\/\/i.postimg.cc\/9Xtybd5q\/1740780789282.jpg",
-        "category": "\u0648\u062c\u0628\u0627\u062a \u0645\u0646\u0648\u0639\u0629",
-        "food_name": "\u0627\u0633\u0645 \u0627\u0644\u0648\u062c\u0628\u0629",
+        "category": "وجبات منوعة",
+        "food_name": "اسم الوجبة",
         "price": "1000000"
+    },
+    {
+        "food_name": "اي اسم",
+        "images": "https:\/\/i.postimg.cc\/9Xtybd5q\/1740780789282.jpg",
+        "price": "20",
+        "category": "اصناف مميزة",
+        "timestamp": "2025-03-11 20:36:33"
     }
 ]
