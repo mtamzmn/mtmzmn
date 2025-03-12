@@ -3,6 +3,7 @@
         "food_name": "سلته",
         "images": "https:\/\/i.postimg.cc\/C5PRVSJH\/download.jpg",
         "price": "15",
+         "description": "وجبة مميزة",
         "category": "اصناف مميزة",
         "timestamp": "2025-03-11 17:44:55"
     },
@@ -10,6 +11,7 @@
         "food_name": "فحسة",
         "images": "https:\/\/i.postimg.cc\/V6wrq7dM\/1740780746228.jpg",
         "price": "30",
+        "description": "وجبة مميزة",
         "category": "اصناف مميزة",
         "timestamp": "2025-03-11 17:45:21"
     },
