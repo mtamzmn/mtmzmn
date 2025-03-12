@@ -6,7 +6,7 @@ async function fetchProperties(buildType, containerId) {
     if (Array.isArray(data)) {
       const cardContainer = document.getElementById(containerId);
       cardContainer.innerHTML = ''; // مسح أي بيانات موجودة
-      data.forEach((item) => {
+      data.forEach((item, index) => {
         if (!buildType || item.category === buildType) { // تصفية بناءً على نوع العقار
           const card = document.createElement("div");
           card.className = "card-item swiper-slide"; 
@@ -23,7 +23,7 @@ async function fetchProperties(buildType, containerId) {
               <div class="rating">
                 ${stars} <!-- عرض النجوم هنا -->
               </div>
-              <a href="https://api.whatsapp.com/send?phone=+966559861051&text=مرحبا,هل يمكنني الحصول على :${item.food_name}" class="btn btn-outline-primary">اطلب الان</a>
+              <a href="details.html?fId=${index}" class="btn btn-outline-primary">تفاصيل</a>
             </div>
           `;
           cardContainer.appendChild(card);
