@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }else if (category === 'وجبات منوعة') {
     categoryTitle.textContent = 'وجبات منوعة';
   }else if (category === 'all') {
-    categoryTitle.textContent = 'كل العقارات';
+    categoryTitle.textContent ='كل المنتجات';
   } else {
     categoryTitle.textContent = 'المنتجات'; // افتراض إذا لم يتم تحديد قيمة
   }
