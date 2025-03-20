@@ -52,7 +52,9 @@ function renderData(data) {
     <img src="${item.images}" class="card-image">
       <div class="card-body">
         <h5 class="card-title">${item.food_name}</h5>
-        <p class="card-text">${item.price} ر.ي</p>
+        <p style="color:#aaa;" class="card-text">
+  ${item.price} <img src="img/ryal.png" style="width:25px;height:25px; vertical-align: middle; margin-left: 5px;">
+</p>
         <div class="rating">
           <i class="bi bi-star-fill" style="color:#3ec15b;"></i>
           <i class="bi bi-star-fill" style="color:#3ec15b;"></i>
