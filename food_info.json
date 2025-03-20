@@ -166,5 +166,13 @@
         "description": "حلا الاولين وعشق الطيبين ",
         "category": "عريكة",
         "timestamp": "2025-03-20 03:00:02"
+    },
+    {
+        "food_name": "عريكة قشطه جبن ",
+        "images": "https:\/\/i.postimg.cc\/DZz1LnWM\/image.webp",
+        "price": "13",
+        "description": "عريكة الطيبين بس تطورت شوي رش جبن شيدر وجبة الابطال ",
+        "category": "عريكة",
+        "timestamp": "2025-03-20 03:05:25"
     }
 ]
