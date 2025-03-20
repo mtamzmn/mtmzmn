@@ -126,5 +126,13 @@
         "description": "مطبق مغررررق قشطه طبق الذوق والرقه",
         "category": "مطبق",
         "timestamp": "2025-03-20 02:15:32"
+    },
+    {
+        "food_name": "مطبق تونه ",
+        "images": "https:\/\/i.postimg.cc\/zXBjmw0g\/image.webp",
+        "price": "9",
+        "description": "مطبق محشي تونه مع اجود خضار الشهية وتوابلنا الجبارة",
+        "category": "مطبق",
+        "timestamp": "2025-03-20 02:17:24"
     }
 ]
