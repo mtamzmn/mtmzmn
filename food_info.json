@@ -118,5 +118,13 @@
         "description": "مطبق محشي موز مطبق يسيطر على جوعك",
         "category": "مطبق",
         "timestamp": "2025-03-20 02:04:57"
+    },
+    {
+        "food_name": "مطبق حلوموز",
+        "images": "https:\/\/i.postimg.cc\/BbCwhqZf\/image.jpg",
+        "price": "8",
+        "description": "مطبق محشي موز مطبق يسيطر على جوعك",
+        "category": "مطبق",
+        "timestamp": "2025-03-20 02:05:53"
     }
 ]
