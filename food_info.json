@@ -102,5 +102,13 @@
         "description": "مطبق الزمن القديم يرجعك لايام الطيبين",
         "category": "مطبق",
         "timestamp": "2025-03-20 01:54:22"
+    },
+    {
+        "food_name": "مطبق حلو جبنه",
+        "images": "https:\/\/i.postimg.cc\/xT3S72pC\/image.webp",
+        "price": "7",
+        "description": "مطبق حلو جبنه .مطبق زمااان .مطبق الحلو على اوصوله ",
+        "category": "مطبق",
+        "timestamp": "2025-03-20 01:59:54"
     }
 ]
