@@ -2,7 +2,7 @@ function updatePrice() {
     const quantity = parseInt(document.getElementById('quantity').value);
     const price = parseFloat(document.getElementById('product-price').getAttribute('data-price'));
     const totalPrice = price * quantity;
-    document.getElementById('product-price').innerHTML = ${totalPrice.toFixed(2)} <img src="img/ryal.png" style="width: 20px; height: 20px; vertical-align: middle;">;
+    document.getElementById('product-price').innerHTML =‘${totalPrice.toFixed(2)} ريال‘;
   }
 
   function addToCart() {
