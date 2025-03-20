@@ -94,5 +94,13 @@
         "description": "الطعم من عندنا والوصف من صوووبك",
         "category": "مطبق",
         "timestamp": "2025-03-20 01:50:11"
+    },
+    {
+        "food_name": "مطبق مالح",
+        "images": "https:\/\/i.postimg.cc\/xC3QLVzB\/image.png",
+        "price": "6",
+        "description": "مطبق الزمن القديم يرجعك لايام الطيبين",
+        "category": "مطبق",
+        "timestamp": "2025-03-20 01:54:22"
     }
 ]
