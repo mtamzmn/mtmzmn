@@ -158,5 +158,13 @@
         "description": "مطبق السعادة مغررررق شوكلاته نوتيلا بنكهة تودي عالم السعادة ",
         "category": "مطبق",
         "timestamp": "2025-03-20 02:51:25"
+    },
+    {
+        "food_name": "عريكة قشطه",
+        "images": "https:\/\/i.postimg.cc\/dQ2JrrYg\/2.jpg",
+        "price": "11",
+        "description": "حلا الاولين وعشق الطيبين ",
+        "category": "عريكة",
+        "timestamp": "2025-03-20 03:00:02"
     }
 ]
