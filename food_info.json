@@ -142,5 +142,13 @@
         "description": "طعم يفوق الوصف جرب شي مايحتاج وصف",
         "category": "مطبق",
         "timestamp": "2025-03-20 02:34:05"
+    },
+    {
+        "food_name": "مطبق دجاج ",
+        "images": "https:\/\/i.postimg.cc\/s2hzTZkF\/2025-03-20-093754.png",
+        "price": "12",
+        "description": "مطبق محشي دجاج طازج مكشن بكل حنيه",
+        "category": "مطبق",
+        "timestamp": "2025-03-20 02:42:33"
     }
 ]
