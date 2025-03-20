@@ -150,5 +150,13 @@
         "description": "مطبق محشي دجاج طازج مكشن بكل حنيه",
         "category": "مطبق",
         "timestamp": "2025-03-20 02:42:33"
+    },
+    {
+        "food_name": "مطبق نوتيلا ",
+        "images": "https:\/\/i.postimg.cc\/8c3wXj83\/image.webp",
+        "price": "10",
+        "description": "مطبق السعادة مغررررق شوكلاته نوتيلا بنكهة تودي عالم السعادة ",
+        "category": "مطبق",
+        "timestamp": "2025-03-20 02:51:25"
     }
 ]
