@@ -70,5 +70,13 @@
         "description": "مطبق ملي بشيدر مع خضار طبق يستحق خمسه نجوووم",
         "category": "مطبق",
         "timestamp": "2025-03-20 01:11:52"
+    },
+    {
+        "food_name": "مطبق جبن سايل خضار",
+        "images": "https:\/\/i.postimg.cc\/RVWdHV7J\/2.jpg",
+        "price": "8",
+        "description": "مطبق جبن سايل محشي مع الخضار طبق ياخذك لايم زمااان",
+        "category": "مطبق",
+        "timestamp": "2025-03-20 01:27:04"
     }
 ]
