@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", fetchData);
-  
+
 const itemsPerPage = 6;
 let currentPage = 1;
 let allData = [];
@@ -27,8 +27,18 @@ async function fetchData() {
     if (allData.length > 0) {
       renderData(allData.slice(0, itemsPerPage));
       renderPagination(allData.length);
+
+      // إزالة رسالة "لا يوجد منتجات لهذا الصنف"
+      document.getElementById("que").innerHTML = '';
     } else {
-      document.getElementById("que").innerHTML = "<p>لا توجد بيانات لهذا التصنيف.</p>";
+      // إضافة رسالة في حال عدم العثور على منتجات لهذا التصنيف
+      document.getElementById("que").innerHTML = `
+        <div class="d-flex justify-content-center align-items-center" style="height:150px;width:100%; background-color: #f2f2f2;">
+          <h5 class="text-center text-muted" style="font-size: 20px; font-weight: normal;">
+            لا يوجد منتجات لهذا الصنف حاليا
+          </h5>
+        </div>
+      `;
     }
   } catch (error) {
     console.error("Error fetching data: ", error);
@@ -49,21 +59,22 @@ function renderData(data) {
     const card = document.createElement('div');
     card.classList.add('card-item');
     card.innerHTML = `
-    <img src="${item.images}" class="card-image">
+      <img src="${item.images}" class="card-image">
       <div class="card-body">
         <h5 class="card-title">${item.food_name}</h5>
         <p style="color:#aaa;" class="card-text">
-  ${item.price} <img src="img/ryal.png" style="width:25px;height:25px; vertical-align: middle; margin-left: 5px;">
-</p>
+          ${item.price} <img src="img/ryal.png" style="width:25px;height:25px; vertical-align: middle; margin-left: 5px;">
+        </p>
         <div class="rating">
           <i class="bi bi-star-fill" style="color:#3ec15b;"></i>
           <i class="bi bi-star-fill" style="color:#3ec15b;"></i>
           <i class="bi bi-star-fill" style="color:#3ec15b;"></i>
           <i class="bi bi-star-fill" style="color:#3ec15b;"></i>
           <i class="bi bi-star-fill" style="color:#3ec15b;"></i>
-          </div>
-          <a href="details.html?fId=${item.id}" class="btn btn-outline-primary">تفاصيل</a>
-      </div>`;
+        </div>
+        <a href="details.html?fId=${item.id}" class="btn btn-outline-primary">تفاصيل</a>
+      </div>
+    `;
     rowContainer.appendChild(card);
   });
 }
@@ -110,9 +121,6 @@ function changePage(page) {
   renderPagination(allData.length);
 }
 
-
-
-
 // تحديث عنوان التصنيف بناءً على معلمة 'category'
 document.addEventListener("DOMContentLoaded", function() {
   const urlParams = new URLSearchParams(window.location.search);
@@ -124,19 +132,23 @@ document.addEventListener("DOMContentLoaded", function() {
     categoryTitle.textContent = 'اصناف مميزة';
   } else if (category === 'مطبق') {
     categoryTitle.textContent = 'مطبق';
-  }else if (category === 'عريكة') {
+  }else if (category === 'جديدنا') {
+    categoryTitle.textContent = 'جديدنا';
+  } else if (category === 'عريكة') {
     categoryTitle.textContent = 'عريكة';
-  }else if (category === 'معصوب') {
+  } else if (category === 'معصوب') {
     categoryTitle.textContent = 'معصوب';
-  }else if (category === 'فول') {
+  } else if (category === 'فول') {
     categoryTitle.textContent = 'فول';
-  }else if (category === 'فاصولياء') {
+  }else if (category === 'بيض') {
+    categoryTitle.textContent = 'بيض';
+  } else if (category === 'فاصولياء') {
     categoryTitle.textContent = 'فاصولياء';
-  }else if (category === 'فطائر') {
+  } else if (category === 'فطائر') {
     categoryTitle.textContent = 'فطائر';
-  }else if (category === 'وجبات منوعة') {
+  } else if (category === 'وجبات منوعة') {
     categoryTitle.textContent = 'وجبات منوعة';
-  }else if (category === 'all') {
+  } else if (category === 'all') {
     categoryTitle.textContent ='كل المنتجات';
   } else {
     categoryTitle.textContent = 'المنتجات'; // افتراض إذا لم يتم تحديد قيمة
