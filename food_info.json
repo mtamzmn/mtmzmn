@@ -230,5 +230,13 @@
         "description": "معصوب جمع كل الحلوه فيه كل السعاده ",
         "category": "معصوب",
         "timestamp": "2025-03-20 22:50:54"
+    },
+    {
+        "food_name": "مرسه سمن وعسل",
+        "images": "https:\/\/i.postimg.cc\/rmXtJY8S\/image.webp",
+        "price": "9",
+        "description": "مرسه الطيبين على كيف كيفك مرسه طبق اساسي بكل سفره ",
+        "category": "معصوب",
+        "timestamp": "2025-03-20 22:54:17"
     }
 ]
