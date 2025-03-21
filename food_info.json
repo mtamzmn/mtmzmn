@@ -238,5 +238,13 @@
         "description": "مرسه الطيبين على كيف كيفك مرسه طبق اساسي بكل سفره ",
         "category": "معصوب",
         "timestamp": "2025-03-20 22:54:17"
+    },
+    {
+        "food_name": "فول جره ",
+        "images": "https:\/\/i.postimg.cc\/ZK7BgqbY\/1024x1024.jpg",
+        "price": "5",
+        "description": "فول جره اصل الفول لو خلاص الفوال انا مش مسوال ",
+        "category": "فول",
+        "timestamp": "2025-03-20 22:58:10"
     }
 ]
