@@ -270,5 +270,13 @@
         "description": "فول قلابه عليه جبن سايل . المتعه الحقيقية ",
         "category": "فول",
         "timestamp": "2025-03-20 23:11:12"
+    },
+    {
+        "food_name": "فول جلاكسي ",
+        "images": "https:\/\/i.postimg.cc\/xdY23KwX\/image.jpg",
+        "price": "13",
+        "description": "فول قلابه مع البيض مع الجبن المثلث اختراع يستحق 1000 نجمه",
+        "category": "فول",
+        "timestamp": "2025-03-20 23:12:32"
     }
 ]
