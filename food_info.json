@@ -318,5 +318,13 @@
         "description": "فاصوليا بيضاء ناشف مع كشنة عليه الكلام 100 بالمايه",
         "category": "فاصولياء",
         "timestamp": "2025-03-21 13:53:42"
+    },
+    {
+        "food_name": "فاصوليا مع البيض",
+        "images": "https:\/\/i.postimg.cc\/c4FYYWfv\/image.png",
+        "price": "12",
+        "description": "فاصوليا حمراء مع البيض الاكثر طلبا ",
+        "category": "فاصولياء",
+        "timestamp": "2025-03-21 13:57:17"
     }
 ]
