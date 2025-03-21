@@ -302,5 +302,13 @@
         "description": "فاصوليا حمراء ناشف محروق المعروف لايعرف ",
         "category": "فاصولياء",
         "timestamp": "2025-03-21 13:51:50"
+    },
+    {
+        "food_name": "فاصوليابيضاء ناشف ",
+        "images": "https:\/\/i.postimg.cc\/26nhBBxY\/image.webp",
+        "price": "11",
+        "description": "فاصوليا بيضاء ناشف مع كشنة عليه الكلام 100 بالمايه",
+        "category": "فاصولياء",
+        "timestamp": "2025-03-21 13:53:36"
     }
 ]
