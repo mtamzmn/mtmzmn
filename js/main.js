@@ -6,12 +6,27 @@ async function fetchProperties(buildType, containerId) {
     if (Array.isArray(data)) {
       const cardContainer = document.getElementById(containerId);
       cardContainer.innerHTML = ''; // مسح أي بيانات موجودة
-      data.forEach((item, index) => {
-        if (!buildType || item.category === buildType) { // تصفية بناءً على نوع العقار
+      
+      // تصفية البيانات بناءً على نوع الصنف (category)
+      const filteredData = data.filter(item => !buildType || item.category === buildType);
+
+      if (filteredData.length === 0) {
+        // إذا كانت القائمة فارغة بعد الفلترة، عرض رسالة لا يوجد منتجات لهذا الصنف
+        cardContainer.innerHTML = `
+        <div class="d-flex justify-content-center align-items-center" style="height:150px;width:100%;margin-top:100px; background-color:#f2f2f2;">
+        <h5 class="text-center text-muted" style="font-size: 20px; font-weight: normal;">
+          لا يوجد منتجات لهذا الصنف حاليا
+        </h5>
+      </div>
+        `;
+      } else {
+        // إذا تم العثور على منتجات، عرضها
+        filteredData.forEach((item, index) => {
           const card = document.createElement("div");
-          card.className = "card-item swiper-slide"; 
+          card.className = "card-item swiper-slide";
           card.style.background = '#fff';
-                  // التقييم الافتراضي (يمكن أن يكون عدد النجوم مثلاً من 0 إلى 5)
+          
+          // التقييم الافتراضي (يمكن أن يكون عدد النجوم مثلاً من 0 إلى 5)
           const rating = item.rating || 0; // التقييم الافتراضي 0
           const stars = generateStars(rating); // إنشاء النجوم بناءً على التقييم
 
@@ -20,8 +35,8 @@ async function fetchProperties(buildType, containerId) {
             <div class="card-body">
               <h5 class="card-title">${item.food_name}</h5>
               <p style="color:#aaa;" class="card-text">
-  ${item.price} <img src="img/ryal.png" style="width:25px;height:25px; vertical-align: middle; margin-left: 5px;">
-</p>
+                ${item.price} <img src="img/ryal.png" style="width:25px;height:25px; vertical-align: middle; margin-left: 5px;">
+              </p>
               <div class="rating">
                 ${stars} <!-- عرض النجوم هنا -->
               </div>
@@ -29,9 +44,9 @@ async function fetchProperties(buildType, containerId) {
             </div>
           `;
           cardContainer.appendChild(card);
-        }
-      });
-      initializeSwiper();
+        });
+        initializeSwiper();
+      }
     } else {
       console.log("No data available");
     }
@@ -42,11 +57,11 @@ async function fetchProperties(buildType, containerId) {
 
 // دالة لإنشاء النجوم بناءً على التقييم
 function generateStars(rating) {
-let starsHtml = '';
-for (let i = 1; i <= 5; i++) {
-starsHtml += '<i class="bi bi-star-fill" style="color:#3ec15b;"></i>'; // نجمة فارغة
-}
-return starsHtml;
+  let starsHtml = '';
+  for (let i = 1; i <= 5; i++) {
+    starsHtml += '<i class="bi bi-star-fill" style="color:#3ec15b;"></i>'; // نجمة ممتلئة
+  }
+  return starsHtml;
 }
 
 async function loadCarouselImages() {
@@ -76,78 +91,90 @@ async function loadCarouselImages() {
   }
 }
 
-  
+async function fetchcat10() {
+  fetchProperties('جديدنا',"mynews"); 
+}
 
-  async function fetchAllcat() {
-    fetchProperties(null, "card-all"); // عرض جميع العقارات
-  }
+async function fetchAllcat() {
+  fetchProperties(null, "card-all"); 
+}
 
-  async function fetchcat1() {
-    fetchProperties('اصناف مميزة',"card-container"); // عرض المنازل فقط
-  }
+async function fetchcat1() {
+  fetchProperties('اصناف مميزة',"card-container"); // عرض الأصناف المميزة فقط
+}
 
-  async function fetchcat2() {
-    fetchProperties('مطبق', "card-container2"); // عرض الأراضي فقط
-  }
+async function fetchcat2() {
+  fetchProperties('مطبق', "card-container2"); // عرض المطبق فقط
+}
 
-  async function fetchcat3() {
-    fetchProperties('عريكة', "card-container3"); // عرض الشقق فقط
-  }
+async function fetchcat3() {
+  fetchProperties('عريكة', "card-container3"); // عرض العريكة فقط
+}
 
-  async function fetchcat4() {
-    fetchProperties('معصوب', "card-container4"); // عرض الشقق فقط
-  }
-  async function fetchcat5() {
-    fetchProperties('فول', "card-container5"); // عرض الشقق فقط
-  }
-  async function fetchcat6() {
-    fetchProperties('فاصولياء', "card-container6"); // عرض الشقق فقط
-  }
-  async function fetchcat7() {
-    fetchProperties('فطائر', "card-container7"); // عرض الشقق فقط
-  }
-  async function fetchcat8() {
-    fetchProperties('وجبات منوعة', "card-container8"); // عرض الشقق فقط
-  }
+async function fetchcat4() {
+  fetchProperties('معصوب', "card-container4"); // عرض المعصوب فقط
+}
 
-  // Initializing Swiper
-  function initializeSwiper() {
-    const swiper = new Swiper('.slider-wrapper', {
-      loop: true,
-      grabCursor: true,
-      spaceBetween: 30,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        dynamicBullets: true
+async function fetchcat5() {
+  fetchProperties('فول', "card-container5"); // عرض الفول فقط
+}
+
+async function fetchcat6() {
+  fetchProperties('فاصولياء', "card-container6"); // عرض الفاصولياء فقط
+}
+
+async function fetchcat9() {
+  fetchProperties('بيض', "eggs"); // عرض الفطائر فقط
+}
+
+async function fetchcat7() {
+  fetchProperties('فطائر', "card-container7"); // عرض الفطائر فقط
+}
+
+async function fetchcat8() {
+  fetchProperties('وجبات منوعة', "card-container8"); // عرض الوجبات المنوعة فقط
+}
+
+// Initializing Swiper
+function initializeSwiper() {
+  const swiper = new Swiper('.slider-wrapper', {
+    loop: true,
+    grabCursor: true,
+    spaceBetween: 30,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      dynamicBullets: true
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 2
       },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+      768: {
+        slidesPerView: 2
       },
-      breakpoints: {
-        0: {
-          slidesPerView: 2
-        },
-        768: {
-          slidesPerView: 2
-        },
-        1024: {
-          slidesPerView: 3
-        }
+      1024: {
+        slidesPerView: 3
       }
-    });
-  }
+    }
+  });
+}
 
-  window.onload = function() {
-    loadCarouselImages();
-    fetchAllcat(); // عرض جميع العقارات
-    fetchcat1(); 
-    fetchcat2();
-    fetchcat3();
-    fetchcat4();
-    fetchcat5();
-    fetchcat6();
-    fetchcat7();
-    fetchcat8();
-  };
+window.onload = function() {
+  loadCarouselImages();
+  fetchAllcat(); // عرض جميع الأصناف
+  fetchcat10();
+  fetchcat1(); 
+  fetchcat2();
+  fetchcat3();
+  fetchcat4();
+  fetchcat5();
+  fetchcat6();
+  fetchcat9();
+  fetchcat7();
+  fetchcat8();
+};
