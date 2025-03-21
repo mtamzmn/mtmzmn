@@ -42,12 +42,14 @@ function showToast() {
 
 function fetchData() {
   const url = new URL(window.location.href);
-  const index = new URLSearchParams(url.search).get('fId'); 
-
+  const productId = new URLSearchParams(url.search).get('fId'); // الحصول على id المنتج من الرابط
+  
   fetch('food_info.json')
     .then(response => response.json())
     .then(data => {
-      const product = data[parseInt(index)];
+      // البحث عن المنتج باستخدام الـ id بدلاً من الـ index
+      const product = data.find(item => item.id === parseInt(productId));
+      
       if (product) {
         document.getElementById('product-id').value = product.id;
         document.getElementById('product-title').innerText = product.food_name;
@@ -64,6 +66,7 @@ function fetchData() {
       console.error("Error fetching data: ", error);
     });
 }
+
 
 window.onload = function() {
   fetchData(); 
