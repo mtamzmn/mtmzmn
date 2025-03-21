@@ -62,7 +62,7 @@ function renderData(data) {
           <i class="bi bi-star-fill" style="color:#3ec15b;"></i>
           <i class="bi bi-star-fill" style="color:#3ec15b;"></i>
           </div>
-          <a href="details.html?fId=${index}" class="btn btn-outline-primary">تفاصيل</a>
+          <a href="details.html?fId=${item.id}" class="btn btn-outline-primary">تفاصيل</a>
       </div>`;
     rowContainer.appendChild(card);
   });
