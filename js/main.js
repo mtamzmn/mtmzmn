@@ -25,7 +25,7 @@ async function fetchProperties(buildType, containerId) {
               <div class="rating">
                 ${stars} <!-- عرض النجوم هنا -->
               </div>
-              <a href="details.html?fId=${index}" class="btn btn-outline-primary">تفاصيل</a>
+              <a href="details.html?fId=${item.id}" class="btn btn-outline-primary">تفاصيل</a>
             </div>
           `;
           cardContainer.appendChild(card);
