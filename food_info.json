@@ -278,5 +278,13 @@
         "description": "فول قلابه مع البيض مع الجبن المثلث اختراع يستحق 1000 نجمه",
         "category": "فول",
         "timestamp": "2025-03-20 23:12:32"
+    },
+    {
+        "food_name": "فول شيباني",
+        "images": "https:\/\/i.postimg.cc\/NF2ScFhh\/image.png",
+        "price": "13",
+        "description": "فول بالتونه مع الجبنه الاختياريه ",
+        "category": "فول",
+        "timestamp": "2025-03-20 23:17:21"
     }
 ]
