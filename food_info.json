@@ -474,5 +474,14 @@
         "description": "بزاليا بالتونه الاكثر طلبا والاكثر مبيعا ",
         "category": "وجبات منوعة",
         "timestamp": "2025-03-21 23:31:24"
+    },
+    {
+        "id": "67de2fa65b9fa",
+        "food_name": "بيض فرن",
+        "images": "https:\/\/i.postimg.cc\/HxJsPt1Q\/image.webp",
+        "price": "10",
+        "description": "بيض فرن محشي بخضار مكشنه شي من الخيال ",
+        "category": "بيض",
+        "timestamp": "2025-03-21 23:33:58"
     }
 ]
