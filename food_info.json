@@ -402,5 +402,14 @@
         "description": "تقاطيع كبده ولحم طاااازج صنف الحبايب ",
         "category": "وجبات منوعة",
         "timestamp": "2025-03-21 22:55:43"
+    },
+    {
+        "id": "67de283488f27",
+        "food_name": "كبده بلدي غنم ",
+        "images": "https:\/\/i.postimg.cc\/Bbyk6xjB\/image.webp",
+        "price": "17",
+        "description": "كبده بلدي طازج الصنف الذي يميزنا عن غيرنا",
+        "category": "وجبات منوعة",
+        "timestamp": "2025-03-21 23:02:12"
     }
 ]
