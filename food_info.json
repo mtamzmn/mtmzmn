@@ -393,5 +393,14 @@
         "description": "الصف الذي نتحدى به . مشكل خضار كوسه باميه بطاط جزر وبهارتنا السريه ",
         "category": "وجبات منوعة",
         "timestamp": "2025-03-21 22:54:26"
+    },
+    {
+        "id": "67de26af2d510",
+        "food_name": "تقاطيع ",
+        "images": "https:\/\/i.postimg.cc\/gcSPQh2J\/image.webp",
+        "price": "17",
+        "description": "تقاطيع كبده ولحم طاااازج صنف الحبايب ",
+        "category": "وجبات منوعة",
+        "timestamp": "2025-03-21 22:55:43"
     }
 ]
