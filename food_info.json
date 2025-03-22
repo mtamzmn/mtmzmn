@@ -546,5 +546,14 @@
         "description": "فطيرة محشيه جبن شيدر اصفر متاح بكل الاوقات",
         "category": "فطائر",
         "timestamp": "2025-03-22 13:21:53"
+    },
+    {
+        "id": "67def20b34027",
+        "food_name": "فطيرة بيض جبن",
+        "images": "https:\/\/i.postimg.cc\/VkXfSv49\/image.webp",
+        "price": "3",
+        "description": "فطايرنا تذكرك بكل غالي نكهات وخلطات الزمن القديم",
+        "category": "فطائر",
+        "timestamp": "2025-03-22 13:23:23"
     }
 ]
