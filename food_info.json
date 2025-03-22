@@ -537,5 +537,14 @@
         "description": "فطيرة بيض ساده مع رشة كمول ",
         "category": "فطائر",
         "timestamp": "2025-03-22 13:19:34"
+    },
+    {
+        "id": "67def1b1d0814",
+        "food_name": "فطيرة جبن شيدر",
+        "images": "https:\/\/i.postimg.cc\/mgnD9KGR\/image.webp",
+        "price": "3",
+        "description": "فطيرة محشيه جبن شيدر اصفر متاح بكل الاوقات",
+        "category": "فطائر",
+        "timestamp": "2025-03-22 13:21:53"
     }
 ]
