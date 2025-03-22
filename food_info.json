@@ -375,5 +375,14 @@
         "description": "شكشوكة عدني بيض مع كشنتنا الرهيبه . الصنف الاول دائما ",
         "category": "بيض",
         "timestamp": "2025-03-21 22:43:07"
+    },
+    {
+        "id": "67de24adae6ca",
+        "food_name": "لحستين",
+        "images": "https:\/\/i.postimg.cc\/NfJZCvbr\/image.webp",
+        "price": "14",
+        "description": "لحستين بجبنتين السائل والشيدر . طلب الاذكياء ",
+        "category": "بيض",
+        "timestamp": "2025-03-21 22:47:09"
     }
 ]
