@@ -573,5 +573,14 @@
         "description": "فطيرة عسل للعسل ",
         "category": "فطائر",
         "timestamp": "2025-03-22 13:26:26"
+    },
+    {
+        "id": "67def2f885c43",
+        "food_name": "فطيرة تونه",
+        "images": "https:\/\/i.postimg.cc\/cHRkwq2b\/image.webp",
+        "price": "4",
+        "description": "فطيرة تونه مكشنه باحلى التفاصيل",
+        "category": "فطائر",
+        "timestamp": "2025-03-22 13:27:20"
     }
 ]
