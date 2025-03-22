@@ -411,5 +411,14 @@
         "description": "كبده بلدي طازج الصنف الذي يميزنا عن غيرنا",
         "category": "وجبات منوعة",
         "timestamp": "2025-03-21 23:02:12"
+    },
+    {
+        "id": "67de2884effb8",
+        "food_name": "لحم مقلقل ",
+        "images": "https:\/\/i.postimg.cc\/fTt1PgP2\/image.webp",
+        "price": "17",
+        "description": "لحم على كيف كيفك مكشن بطماطم والبصل وكشنتنا الرهيبه",
+        "category": "وجبات منوعة",
+        "timestamp": "2025-03-21 23:03:32"
     }
 ]
