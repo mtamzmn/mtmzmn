@@ -582,5 +582,14 @@
         "description": "فطيرة تونه مكشنه باحلى التفاصيل",
         "category": "فطائر",
         "timestamp": "2025-03-22 13:27:20"
+    },
+    {
+        "id": "67def3594ccf1",
+        "food_name": "فطيرة كبدة",
+        "images": "https:\/\/i.postimg.cc\/90tGLCYv\/image.webp",
+        "price": "5",
+        "description": "فطيرة السيطره لكل جوع",
+        "category": "فطائر",
+        "timestamp": "2025-03-22 13:28:57"
     }
 ]
