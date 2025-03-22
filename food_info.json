@@ -465,5 +465,14 @@
         "description": "تونه مع البيض للاذكياء فقط",
         "category": "وجبات منوعة",
         "timestamp": "2025-03-21 23:27:51"
+    },
+    {
+        "id": "67de2f0c7d12a",
+        "food_name": "بازليا بالتونه",
+        "images": "https:\/\/i.postimg.cc\/k457Rvg0\/image.jpg",
+        "price": "12",
+        "description": "بزاليا بالتونه الاكثر طلبا والاكثر مبيعا ",
+        "category": "وجبات منوعة",
+        "timestamp": "2025-03-21 23:31:24"
     }
 ]
