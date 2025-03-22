@@ -555,5 +555,14 @@
         "description": "فطايرنا تذكرك بكل غالي نكهات وخلطات الزمن القديم",
         "category": "فطائر",
         "timestamp": "2025-03-22 13:23:23"
+    },
+    {
+        "id": "67def2829a3e6",
+        "food_name": "فطيرة جبنتين",
+        "images": "https:\/\/i.postimg.cc\/K85Yq4LG\/image.webp",
+        "price": "4",
+        "description": "فطيرة تحتوي على سعادتين جبنه شيدر وسائل",
+        "category": "فطائر",
+        "timestamp": "2025-03-22 13:25:22"
     }
 ]
