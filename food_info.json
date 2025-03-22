@@ -600,5 +600,14 @@
         "description": "فطيرة تاخذك لعالم المغامره والسيطره على كل جوع ",
         "category": "فطائر",
         "timestamp": "2025-03-22 13:30:35"
+    },
+    {
+        "id": "67def3ee85c99",
+        "food_name": "فطيرة نوتيلا",
+        "images": "https:\/\/i.postimg.cc\/j5v8jHGW\/image.png",
+        "price": "4",
+        "description": "فطيرة المحبه والسعاده ",
+        "category": "فطائر",
+        "timestamp": "2025-03-22 13:31:26"
     }
 ]
