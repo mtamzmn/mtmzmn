@@ -528,5 +528,14 @@
         "description": "فطاير محشيه بالجبن السايل على كيف كيفك",
         "category": "فطائر",
         "timestamp": "2025-03-22 13:17:39"
+    },
+    {
+        "id": "67def1263b7df",
+        "food_name": "فطيرة بيض ساده",
+        "images": "https:\/\/i.postimg.cc\/tT0KQNFF\/2025-03-22-105929.png",
+        "price": "2",
+        "description": "فطيرة بيض ساده مع رشة كمول ",
+        "category": "فطائر",
+        "timestamp": "2025-03-22 13:19:34"
     }
 ]
