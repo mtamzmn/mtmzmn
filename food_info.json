@@ -609,5 +609,14 @@
         "description": "فطيرة المحبه والسعاده ",
         "category": "فطائر",
         "timestamp": "2025-03-22 13:31:26"
+    },
+    {
+        "id": "67def4967a5e4",
+        "food_name": "فطيرة دجاج",
+        "images": "https:\/\/i.postimg.cc\/FzYKRQT2\/2025-03-22-203259.png",
+        "price": "5",
+        "description": "فطيرة دجاج مكشن نصحيه جربهااا",
+        "category": "فطائر",
+        "timestamp": "2025-03-22 13:34:14"
     }
 ]
