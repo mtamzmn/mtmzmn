@@ -519,5 +519,14 @@
         "description": "فطيرة السعادة فطيرة عدني ",
         "category": "فطائر",
         "timestamp": "2025-03-22 13:15:44"
+    },
+    {
+        "id": "67def0b3978be",
+        "food_name": "فطيرة جبن سايل",
+        "images": "https:\/\/i.postimg.cc\/pVQHv4Gr\/image.webp",
+        "price": "2",
+        "description": "فطاير محشيه بالجبن السايل على كيف كيفك",
+        "category": "فطائر",
+        "timestamp": "2025-03-22 13:17:39"
     }
 ]
