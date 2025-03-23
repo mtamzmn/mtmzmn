@@ -1,0 +1,22 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://zamanrestaurant.netlify.app/</loc>
+    <lastmod>2025-02-02T21:35:30+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://zamanrestaurant.netlify.app/view_category?category=all</loc>
+    <lastmod>2025-02-01T10:20:30+00:00</lastmod>
+  </url>
+  
+    <url>
+    <loc>https://zamanrestaurant.netlify.app/details.html</loc>
+    <lastmod>2025-02-01T10:20:30+00:00</lastmod>
+  </url>
+  
+      <url>
+    <loc>https://zamanrestaurant.netlify.app/cart</loc>
+    <lastmod>2025-02-01T10:20:30+00:00</lastmod>
+  </url>
+  
+  <!-- إضافة روابط أخرى هنا -->
+</urlset>
