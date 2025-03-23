@@ -66,5 +66,11 @@
             "text": "Hgg",
             "timestamp": "2025-03-23 01:55:48"
         }
+    ],
+    "example-product-id": [
+        {
+            "text": "\u062a\u064a\u062a\u064a\u062a",
+            "timestamp": "2025-03-23 02:01:10"
+        }
     ]
 }
