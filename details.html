@@ -127,6 +127,58 @@
     .toast-body {
       font-size: 1rem;
     }
+
+    .comment-section {
+      margin-top: 40px;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .comment {
+      background-color: #f1f1f1;
+      border-left: 5px solid #28a745;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .comment .comment-author {
+      font-weight: bold;
+      color: #007bff;
+    }
+
+    .comment .comment-text {
+      margin-top: 10px;
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    .comment-form {
+      margin-top: 30px;
+    }
+
+    .comment-form textarea {
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      font-size: 1.1rem;
+      padding: 10px;
+    }
+
+    .comment-form button {
+      background-color: #28a745;
+      color: #fff;
+      border-radius: 8px;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 10px;
+    }
+
+    .comment-form button:hover {
+      background-color: #218838;
+    }
   </style>
 </head>
 <body>
@@ -172,6 +224,20 @@
     </div>
   </div>
 
+  <div class="container mt-5">
+    <div class="comment-section">
+      <h3>التعليقات</h3>
+      <!-- سيتم إضافة التعليقات هنا ديناميكيًا -->
+      <div id="comments-container"></div>
+
+      <!-- نموذج إضافة تعليق -->
+      <div class="comment-form">
+        <textarea id="comment-text" class="form-control" rows="4" placeholder="اكتب تعليقك هنا..."></textarea>
+        <button class="btn btn-success mt-2" onclick="addNewComment()">إضافة تعليق</button>
+      </div>
+    </div>
+  </div>
+ 
   <!-- Toast Notification -->
   <div class="toast-container">
     <div id="toast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
@@ -189,4 +255,45 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
   <script src="js/details.js"></script>
 </body>
+<script>
+ function addNewComment() {
+  // الحصول على التعليق
+  const commentText = document.getElementById("comment-text").value;
+  const productId = document.getElementById('product-id').value;
+
+  // التحقق من أن التعليق ليس فارغاً
+  if (commentText.trim() !== "") {
+    // التحقق من أن معرف المنتج ليس فارغاً
+    if (productId.trim() !== "") {
+      // هنا نقوم بتشفير التعليق بحيث لا يحتوي على أحرف قد تسبب مشاكل في الرابط
+      const encodedComment = encodeURIComponent(commentText);
+
+      // بناء الرابط الجديد مع المتغيرات
+      const newUrl = `https://mtamzman.infy.uk/sendcomment.html?product_id=${productId}&comment=${encodedComment}`;
+
+      console.log("Redirecting to URL: ", newUrl);  // طباعة الرابط المتكون للتحقق منه
+
+      // الانتقال إلى الرابط الجديد مع المتغيرات
+      window.location.replace(newUrl);
+    } else {
+      alert("يرجى تحديد معرف المنتج.");
+    }
+  } else {
+    alert("يرجى كتابة تعليق قبل الإرسال");
+  }
+}
+
+/*
+function showToast(message, type) {
+  const toastContainer = document.createElement('div');
+  toastContainer.className = `toast toast-${type}`;
+  toastContainer.textContent = message;
+  document.body.appendChild(toastContainer);
+
+  setTimeout(() => {
+    toastContainer.remove();
+  }, 3000); // إزالة الإشعار بعد 3 ثوانٍ
+}
+*/
+</script>
 </html>
