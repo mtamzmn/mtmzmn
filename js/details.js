@@ -67,8 +67,46 @@ function fetchData() {
     });
 }
 
+// تحميل التعليقات من ملف JSON
+function loadComments() {
+  const url = new URL(window.location.href);
+  const productId = new URLSearchParams(url.search).get('fId');
+  const commentStatus = new URLSearchParams(url.search).get('comment_status');
+// إذا كان التعليق ناجحًا، نعرض إشعار النجاح
+if (commentStatus === 'success') {
+  console.log('تم إرسال التعليق بنجاح!');
+} else if (commentStatus === 'failure') {
+  console.log('فشل في إرسال التعليق. يرجى المحاولة مرة أخرى.');
+}
+  fetch('comments.json')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('فشل في تحميل الملف');
+      }
+      return response.json();
+    })
+    .then(comments => {
+      const commentsContainer = document.getElementById('comments-container');
+      commentsContainer.innerHTML = '';  
 
+      if (comments[productId]) {
+        comments[productId].forEach(comment => {
+          const commentElement = document.createElement('div');
+          commentElement.classList.add('comment');
+          commentElement.innerHTML = `
+            <div class="comment-text">${comment.text}</div>
+          `;
+
+          commentsContainer.appendChild(commentElement);
+        });
+      }
+    })
+    .catch(error => {
+      console.error('Error loading comments:', error);
+    });
+}
 
 window.onload = function() {
   fetchData(); 
+  loadComments();
 };
