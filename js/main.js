@@ -31,11 +31,11 @@ async function fetchProperties(buildType, containerId) {
           const stars = generateStars(rating); // إنشاء النجوم بناءً على التقييم
 
           card.innerHTML = `
-            <img src="${item.images}" class="card-image">
+            <img src="${item.images}" class="card-image" alt="مطعم الزمن القديم افضل مطعم شعبي في السعودية ومكة المكرمة">
             <div class="card-body">
               <h5 class="card-title">${item.food_name}</h5>
               <p style="color:#aaa;" class="card-text">
-                ${item.price} <img src="img/ryal.png" style="width:25px;height:25px; vertical-align: middle; margin-left: 5px;">
+                ${item.price} <img src="img/ryal.png" style="width:25px;height:25px; vertical-align: middle; margin-left: 5px;" alt="مطعم الزمن القديم افضل مطعم شعبي في السعودية ومكة المكرمة">
               </p>
               <div class="rating">
                 ${stars} <!-- عرض النجوم هنا -->
