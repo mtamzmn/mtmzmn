@@ -1,220 +1,153 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>سلة المنتجات لمطعم الزمن القديم</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap">
-  <link rel="stylesheet" href="css/st.css">
-  <!-- Meta Data -->
-<title>أفضل الأكلات الشعبية اليمنية في مكة | مطعم الزمن القديم | طلب الطعام أونلاين في مكة</title>
-<meta name="keywords" content="مطعم مكة, أكلات شعبية يمنية, الطعام اليمني, أكلات يمنية تقليدية, مطعم الزمن القديم, طلب الطعام أونلاين مكة, المندي اليمني, السلتة اليمنية, الكبسة اليمنية, الشوا التلي اليمني, مطاعم مكة المكرمة">
-<meta name="author" content="مطعم الزمن القديم">
-<meta name="description" content="استمتع بأشهى الأكلات الشعبية اليمنية في مطعم الزمن القديم بمكة المكرمة. يقدم لك أطعمة تقليدية يمنية فريدة من نوعها، مثل المندي، السلتة، والكبسة، ويمكنك الآن طلب الطعام أونلاين وتوصيله إلى باب منزلك.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>سلة المشتريات | مطعم الزمن القديم</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+body { font-family: 'Cairo', sans-serif; background: #fefefe; color: #333; }
+.navbar { background: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+.navbar-brand { font-weight: 700; color: #d35400 !important; }
 
-<!-- Directives for Googlebot and other bots -->
-<meta name="googlebot" content="index, follow">
-<meta name="robots" content="index, follow">
 
-<!-- Canonical Link -->
-<link rel="canonical" href="https://zamanrestaurant.netlify.app/">
-
-<!-- Open Graph Meta Tags -->
-<meta property="og:locale" content="ar_AR">
-<meta property="og:type" content="website">
-<meta property="og:title" content="أفضل الأكلات الشعبية اليمنية في مكة | مطعم الزمن القديم">
-<meta property="og:description" content="مطعم الزمن القديم يقدم لك أفضل الأكلات الشعبية اليمنية في مكة المكرمة. اطلب الطعام الآن عبر موقعنا واستمتع بتجربة لا تُنسى من المندي، السلتة، والكبسة اليمنية.">
-<meta property="og:url" content="https://zamanrestaurant.netlify.app/">
-<meta property="og:site_name" content="مطعم الزمن القديم">
-<meta property="og:image" content="https://i.postimg.cc/d0Yq5yKL/image.png">
-
-<!-- Twitter Meta Tags -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:description" content="مطعم الزمن القديم في مكة يقدم ألذ الأكلات الشعبية اليمنية. اطلب طعامك الآن أونلاين واستمتع بخدمة توصيل سريعة ومريحة إلى منزلك.">
-<meta name="twitter:title" content="أفضل الأكلات الشعبية اليمنية في مكة | مطعم الزمن القديم">
-<meta name="twitter:image" content="https://i.postimg.cc/d0Yq5yKL/image.png">
-<meta name="twitter:url" content="https://zamanrestaurant.netlify.app/">
-
-<!-- Structured Data for Contact Information (Schema Markup) -->
-<script type="application/ld+json">
-{
-  "@context": "https://zamanrestaurant.netlify.app/",
-  "@type": "Organization",
-  "name": "مطعم الزمن القديم",
-  "url": "https://zamanrestaurant.netlify.app/",
-  "logo": "https://i.postimg.cc/d0Yq5yKL/image.png",
-  "contactPoint": [{
-    "@type": "ContactPoint",
-    "telephone": "966550852093",
-    "contactType": "customer service",
-    "areaServed": "SA",
-    "availableLanguage": "Arabic"
-  }],
-  "sameAs": [
-    "https://www.facebook.com/alzamanrestaurant",
-    "https://twitter.com/alzamanrestaurant",
-    "https://www.instagram.com/alzamanrestaurant"
-  ]
-}
-</script>
-
-<!-- Sitemap Link (helps search engines discover the sitemap) -->
-<link rel="sitemap" type="application/xml" href="https://alzamanrestaurant.com.sa/sitemap.xml">
-
-<!-- Hreflang for multilingual support -->
-<link rel="alternate" href="https://zamanrestaurant.netlify.app/" hreflang="ar-sa">
-
-<!-- Favicon -->
-<link rel="icon" href="https://i.postimg.cc/d0Yq5yKL/image.png" type="image/png">
-<link rel="apple-touch-icon" sizes="180x180" href="https://i.postimg.cc/d0Yq5yKL/image.png">
-
-<meta name="rating" content="General">
-<meta name="copyright" content="جميع الحقوق محفوظة لموقع مطعم الزمن القديم | © 2025">
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #f8f9fa;
-      margin: 0;
-      padding: 0;
-      padding-top: 80px; /* المسافة بين الشريط العلوي والمحتوى */
-    }
-
-    nav.navbar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
-      background-color: white;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .cart-container {
-      background-color: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      margin-top: 80px; /* تعديل المسافة لتكون تحت الشريط العلوي */
-    }
-
-    .cart-item {
-      border-bottom: 1px solid #ddd;
-      padding: 15px 0;
-    }
-
-    .cart-item:last-child {
-      border-bottom: none;
-    }
-
-    .cart-item img {
-      width: 80px;
-      height: 80px;
-      object-fit: cover;
-      border-radius: 8px;
-    }
-
-    .cart-item-title {
-      font-size: 1.2rem;
-      font-weight: bold;
-    }
-
-    .cart-item-details {
-      font-size: 1rem;
-      color: #555;
-    }
-
-    .total-price {
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: #28a745;
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    .checkout-btn, .clear-cart-btn {
-      width: 100%;
-      padding: 15px;
-      background-color: #007bff;
-      border: none;
-      border-radius: 8px;
-      color: #fff;
-      font-size: 1.2rem;
-      transition: background-color 0.3s ease;
-    }
-
-    .checkout-btn:hover, .clear-cart-btn:hover {
-      background-color: #0056b3;
-    }
-
-    .empty-cart {
-      text-align: center;
-      margin-top: 50px;
-    }
-
-    .empty-cart p {
-      font-size: 1.2rem;
-      color: #999;
-    }
-  </style>
+.cart-title { font-size: 2rem; font-weight: 700; margin-bottom: 30px; color: #d35400; text-align: center; }
+.cart-table { background: #fff; border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.08); padding: 20px; }
+.cart-table th, .cart-table td { vertical-align: middle; text-align: center; }
+.cart-table img { width: 80px; height: 80px; object-fit: cover; border-radius: 10px; }
+.btn-remove { background: #e74c3c; color: #fff; border: none; border-radius: 8px; padding: 5px 10px; }
+.btn-remove:hover { background: #c0392b; }
+.total-container { text-align: right; margin-top: 20px; font-size: 1.3rem; font-weight: bold; }
+.checkout-btn { background: #d35400; color: #fff; border: none; padding: 12px 30px; font-size: 1.2rem; border-radius: 10px; margin-top: 20px; }
+.checkout-btn:hover { background: #b84300; }
+.clear-btn { background: #555; color: #fff; border: none; padding: 12px 20px; font-size: 1rem; border-radius: 10px; margin-top: 20px; margin-left: 10px; }
+.clear-btn:hover { background: #333; }
+.quantity-input { width: 70px; text-align: center; border-radius: 8px; border: 1px solid #ccc; }
+.empty-cart { text-align: center; font-size: 1.5rem; color: #888; margin-top: 50px; }
+</style>
 </head>
 <body>
-  <nav class="navbar navbar-expand navbar-light shadow-sm">
-    <div class="container-fluid">
-      <a class="navbar-brand text-primary" href="index.html">
-        الرئيسية 
-        <i class="bi bi-arrow-left-circle"></i> <!-- إضافة رمز السهم -->
-      </a>
-  
-      <!-- زر التبديل للأجهزة الصغيرة -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-  
-      <!-- العناصر في القائمة -->
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav ms-auto">
-          <!-- رابط تفاصيل العقار -->
-          <a class="nav-link active fs-5 text-primary" id="category-title" aria-current="page" href="#">
-          سلة الطلبات
-          </a>
-        </div>
-      </div>
-    </div>
-  </nav>
 
-  <div class="container cart-container">
-    <h2 class="text-center">السلة</h2>
-    
-    <div id="cart-items-container">
-      <!-- سيتم ملء العناصر هنا -->
-    </div>
-
-    <div id="empty-cart" class="empty-cart" style="display: none;">
-      <p>السلة فارغة، يمكنك إضافة بعض المنتجات.</p>
-    </div>
-
-    <div class="total-price" id="total-price">
-      الإجمالي: 0 ريال
-    </div>
-
-    <button id="checkout-btn" class="checkout-btn m-1" style="display: none;" onclick="proceedToCheckout()">
-      إتمام الشراء
-    </button>
-
-    <!-- زر تفريغ السلة -->
-    <button id="clear-cart-btn" class="btn btn-danger m-1" style="display: none; width:100%;" onclick="clearCart()">
-      إفراغ السلة
-    </button>
-      
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html"><i class="bi bi-house-door"></i> الرئيسية</a>
+    <span class="ms-auto fs-5">سلة المشتريات</span>
   </div>
+</nav>
 
-  <!-- تحميل مكتبات JavaScript الخاصة بـ Bootstrap -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-  <script src="js/cart.js"></script>
+<div class="container">
+  <h2 class="cart-title">سلة مشترياتك</h2>
+  
+  <div id="cart-container"></div>
+
+  <div class="text-end">
+    <div class="total-container" id="total-price">إجمالي السعر: 0 ريال</div>
+    <button class="checkout-btn" id="checkout-btn" onclick="proceedToCheckout()">إتمام الطلب</button>
+    <button class="clear-btn" id="clear-cart-btn" onclick="clearCart()">افراغ السلة</button>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+function displayCart() {
+  const container = document.getElementById('cart-container');
+  const totalPriceContainer = document.getElementById('total-price');
+  const checkoutBtn = document.getElementById('checkout-btn');
+  const clearBtn = document.getElementById('clear-cart-btn');
+
+  container.innerHTML = '';
+
+  if (!cart.length) {
+    container.innerHTML = '<div class="empty-cart">سلة المشتريات فارغة</div>';
+    totalPriceContainer.innerText = 'إجمالي السعر: 0 ريال';
+    checkoutBtn.style.display = 'none';
+    clearBtn.style.display = 'none';
+    return;
+  }
+
+  checkoutBtn.style.display = 'inline-block';
+  clearBtn.style.display = 'inline-block';
+
+  const table = document.createElement('table');
+  table.className = 'table cart-table';
+  table.innerHTML = `
+    <thead>
+      <tr>
+        <th>صورة</th>
+        <th>المنتج</th>
+        <th>السعر الفردي</th>
+        <th>الكمية</th>
+        <th>السعر الإجمالي</th>
+        <th>حذف</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  `;
+
+  const tbody = table.querySelector('tbody');
+
+  cart.forEach((item, index) => {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td><img src="${item.productImage}" alt="${item.productTitle}"></td>
+      <td>${item.productTitle}</td>
+      <td>${item.price.toFixed(2)} ريال</td>
+      <td><input type="number" class="quantity-input" value="${item.quantity}" min="1" onchange="updateQuantity(${index}, this.value)"></td>
+      <td>${(item.price * item.quantity).toFixed(2)} ريال</td>
+      <td><button class="btn-remove" onclick="removeItem(${index})"><i class="bi bi-trash"></i></button></td>
+    `;
+    tbody.appendChild(tr);
+  });
+
+  container.appendChild(table);
+  updateTotal();
+}
+
+function updateQuantity(index, value) {
+  const qty = parseInt(value);
+  if (qty < 1) return;
+  cart[index].quantity = qty;
+  cart[index].totalPrice = cart[index].price * qty;
+  localStorage.setItem('cart', JSON.stringify(cart));
+  displayCart();
+}
+
+function removeItem(index) {
+  cart.splice(index, 1);
+  localStorage.setItem('cart', JSON.stringify(cart));
+  displayCart();
+}
+
+function updateTotal() {
+  const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+  document.getElementById('total-price').innerText = `إجمالي السعر: ${total.toFixed(2)} ريال`;
+}
+
+function proceedToCheckout() {
+  if (!cart.length) return;
+  let orderDetails = 'طلباتي:\n';
+  cart.forEach(item => {
+    orderDetails += `المنتج: ${item.productTitle}\nالكمية: ${item.quantity}\nالإجمالي: ${(item.price*item.quantity).toFixed(2)} ريال\n\n`;
+  });
+  const totalPrice = cart.reduce((acc, item) => acc + item.price*item.quantity, 0);
+  orderDetails += `الإجمالي الكلي: ${totalPrice.toFixed(2)} ريال\n`;
+
+  const whatsappUrl = `https://wa.me/+966507079844?text=${encodeURIComponent(orderDetails)}`;
+  window.open(whatsappUrl, '_blank');
+}
+
+function clearCart() {
+  localStorage.removeItem('cart');
+  cart = [];
+  displayCart();
+}
+
+window.onload = displayCart;
+</script>
+
 </body>
 </html>
