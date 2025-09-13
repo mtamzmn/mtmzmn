@@ -1,725 +1,607 @@
 <!DOCTYPE html>
-<html lang="en" dir="rtl">
+<html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
- <!-- bootstrap css -->
- <link rel = "stylesheet" href = "css/bootstrap.min.css">
- <!-- custom css -->
-<link rel="stylesheet" href="css/st.css">
-    <!-- Bootstrap CSS -->
-<!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-<!-- Meta Data -->
-<title>أفضل الأكلات الشعبية اليمنية في مكة | مطعم الزمن القديم | طلب الطعام أونلاين في مكة</title>
-<meta name="keywords" content="مطعم مكة, أكلات شعبية يمنية, الطعام اليمني, أكلات يمنية تقليدية, مطعم الزمن القديم, طلب الطعام أونلاين مكة, المندي اليمني, السلتة اليمنية, الكبسة اليمنية, الشوا التلي اليمني, مطاعم مكة المكرمة">
-<meta name="author" content="مطعم الزمن القديم">
-<meta name="description" content="استمتع بأشهى الأكلات الشعبية اليمنية في مطعم الزمن القديم بمكة المكرمة. يقدم لك أطعمة تقليدية يمنية فريدة من نوعها، مثل المندي، السلتة، والكبسة، ويمكنك الآن طلب الطعام أونلاين وتوصيله إلى باب منزلك.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>مطعمي — الصفحة الرئيسية</title>
 
-<!-- Directives for Googlebot and other bots -->
-<meta name="googlebot" content="index, follow">
-<meta name="robots" content="index, follow">
+  <!-- Google Font Tajawal -->
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
 
-<!-- Canonical Link -->
-<link rel="canonical" href="https://zamanrestaurant.netlify.app/">
+  <!-- Bootstrap CSS + Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
-<!-- Open Graph Meta Tags -->
-<meta property="og:locale" content="ar_AR">
-<meta property="og:type" content="website">
-<meta property="og:title" content="أفضل الأكلات الشعبية اليمنية في مكة | مطعم الزمن القديم">
-<meta property="og:description" content="مطعم الزمن القديم يقدم لك أفضل الأكلات الشعبية اليمنية في مكة المكرمة. اطلب الطعام الآن عبر موقعنا واستمتع بتجربة لا تُنسى من المندي، السلتة، والكبسة اليمنية.">
-<meta property="og:url" content="https://zamanrestaurant.netlify.app/">
-<meta property="og:site_name" content="مطعم الزمن القديم">
-<meta property="og:image" content="https://i.postimg.cc/d0Yq5yKL/image.png">
+<!-- Animate.css CDN لإضافة حركة للنصوص -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
-<!-- Twitter Meta Tags -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:description" content="مطعم الزمن القديم في مكة يقدم ألذ الأكلات الشعبية اليمنية. اطلب طعامك الآن أونلاين واستمتع بخدمة توصيل سريعة ومريحة إلى منزلك.">
-<meta name="twitter:title" content="أفضل الأكلات الشعبية اليمنية في مكة | مطعم الزمن القديم">
-<meta name="twitter:image" content="https://i.postimg.cc/d0Yq5yKL/image.png">
-<meta name="twitter:url" content="https://zamanrestaurant.netlify.app/">
-
-<!-- Structured Data for Contact Information (Schema Markup) -->
-<script type="application/ld+json">
-{
-  "@context": "https://zamanrestaurant.netlify.app/",
-  "@type": "Organization",
-  "name": "مطعم الزمن القديم",
-  "url": "https://zamanrestaurant.netlify.app/",
-  "logo": "https://i.postimg.cc/d0Yq5yKL/image.png",
-  "contactPoint": [{
-    "@type": "ContactPoint",
-    "telephone": "966550852093",
-    "contactType": "customer service",
-    "areaServed": "SA",
-    "availableLanguage": "Arabic"
-  }],
-  "sameAs": [
-    "https://www.facebook.com/alzamanrestaurant",
-    "https://twitter.com/alzamanrestaurant",
-    "https://www.instagram.com/alzamanrestaurant"
-  ]
+  <style>
+    :root{
+      --main:#d35400;
+      --main-dark:#b03a2e;
+      --muted:#777;
+      --card-border:#e6e6e6;
+    }
+    body{
+      font-family: "Tajawal", sans-serif;
+      background:#fdfdfd;
+      color:#222;
+    }
+   .navbar-nav .nav-link{
+  position: relative;
+  transition: color 0.3s;
 }
-</script>
-
-<!-- Sitemap Link (helps search engines discover the sitemap) -->
-<link rel="sitemap" type="application/xml" href="https://alzamanrestaurant.com.sa/sitemap.xml">
-
-<!-- Hreflang for multilingual support -->
-<link rel="alternate" href="https://zamanrestaurant.netlify.app/" hreflang="ar-sa">
-
-<!-- Favicon -->
-<link rel="icon" href="https://i.postimg.cc/d0Yq5yKL/image.png" type="image/png">
-<link rel="apple-touch-icon" sizes="180x180" href="https://i.postimg.cc/d0Yq5yKL/image.png">
-
-<meta name="rating" content="General">
-<meta name="copyright" content="جميع الحقوق محفوظة لموقع مطعم الزمن القديم | © 2025">
-
-<style>
-/*تنسيق الشريط العلوي الخاص بفلترة التصنيفات*/
-.btn-food-filter {
-background-color: #3ec15b;
-border-radius: 50px;
-padding: 10px 30px; 
-font-size: 16px; 
-font-weight: bold; 
-transition: all 0.3s ease;
-width: fit-content; white-space: nowrap;
+.navbar-nav .nav-link::after{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #d35400;
+  transition: width 0.3s;
+}
+.navbar-nav .nav-link:hover{
+  color: #d35400;
+}
+.navbar-nav .nav-link:hover::after{
+  width: 100%;
+}
+.navbar-toggler{
+  outline: none;
+}
+/* صورة الكاروسيل + تأثير */
+.hero-section .carousel-item {
+  position: relative;
+  height: 80vh;
+}
+.hero-section .carousel-item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(70%); /* تخفيف قوة الصورة */
 }
 
-/* تأثير التمرير عند مرور الفأرة */
-.btn-food-filter:hover {
-background-color: #34b14a;
-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
-transform: translateY(-5px);
+/* طبقة تعتيم فوق الصورة */
+.hero-section .carousel-item::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 1;
 }
 
-/* تنسيق الشريط */
-.d-flex {
-display: flex;
-overflow-x: auto;
-gap: 15px;
-padding: 5px 0;
-scroll-behavior: smooth; 
+/* النصوص */
+.hero-section .carousel-caption {
+  bottom: 20%;
+  z-index: 2; /* فوق الطبقة */
+  text-shadow: 0 4px 15px rgba(0,0,0,0.9);
+}
+.hero-section .carousel-caption h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #fff;
+}
+.hero-section .carousel-caption p {
+  font-size: 1.3rem;
+  color: #f1f1f1;
+  margin-bottom: 20px;
 }
 
-/* تغيير لون شريط التمرير */
-.d-flex::-webkit-scrollbar {
-  width: 10px; 
-  height: 8px; 
+/* الزر */
+.hero-section .carousel-caption .btn-main {
+  background: var(--main);
+  color: #fff;
+  padding: 12px 35px;
+  font-size: 1.15rem;
+  border-radius: 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+  transition: all 0.3s;
+}
+.hero-section .carousel-caption .btn-main:hover {
+  background: var(--main-dark);
+  transform: translateY(-3px);
 }
 
-/* تغيير لون الجزء المتحرك (الذي يتم سحبه) */
-.d-flex::-webkit-scrollbar-thumb {
-  background-color: #3ec15b; 
-  border-radius: 10px;
-  border: 2px solid #fff;
+/* تصميم البطاقة الحديث */
+.category-card {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
 }
 
-/* تغيير لون المسار (المكان الذي يتحرك فيه الشريط) */
-.d-flex::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 10px; 
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
 }
-/* تخصيص العرض في النسخ الصغيرة */
+
+.category-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.category-card:hover img {
+  transform: scale(1.07);
+}
+
+.food-info {
+  padding: 1rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.food-info h5 {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.food-info p {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 0.8rem;
+}
+
+.food-info .price {
+  font-weight: bold;
+  color: #d35400;
+  font-size: 1.5rem;
+}
+
+.food-info .btn {
+  margin-top: 0.5rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+/* تجاوب البطاقة */
+@media (max-width: 1200px) {
+  .category-card { flex: 1 1 calc(33.33% - 1rem); max-width: calc(33.33% - 1rem); }
+}
 @media (max-width: 768px) {
-  .d-flex {
-    gap: 10px;
-  }
-  .btn-food-filter {
-    font-size: 14px;
-  }
-  
-.card-item img {
-height:100px;
-width:100px;
-} 
+  .category-card { flex: 1 1 calc(50% - 1rem); max-width: calc(50% - 1rem); }
 }
-</style>
+@media (max-width: 480px) {
+  .category-card { flex: 1 1 100%; max-width: 100%; }
+}
+    .category-section{
+      background:#fff;
+      border:1px solid var(--card-border);
+      border-radius:12px;
+      padding:1.25rem;
+      margin-bottom:1.25rem;
+    }
+    .category-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;border-bottom:1px solid #f0f0f0;padding-bottom:.75rem;}
+    .category-header h5{margin:0;font-weight:700;color:#222;display:flex;align-items:center;gap:.5rem;}
+    .category-card{
+      background:#fff;
+      border:1px solid #e9e9e9;
+      border-radius:12px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.05);
+      width:300px;
+      overflow:hidden;
+      transition:.3s;
+    }
+    .category-card:hover{transform:translateY(-5px);}
+    .category-card img{width:100%;height:180px;object-fit:cover;}
+    .category-card h5{margin:0;padding:.5rem 1rem;font-size:1.05rem;font-weight:700;color:#222;}
+    .category-card p{padding:0 1rem 1rem;color:var(--muted);}
+    .price{color:var(--main);font-weight:700;padding:0 1rem 1rem;display:block;}
+   
+  footer a:hover {
+    text-decoration: underline;
+  }
+  .btn-main {
+    background-color: #c0392b;
+    color: white;
+  }
+  .btn-main:hover {
+    background-color: #e74c3c;
+    color: white;
+  }
+  </style>
 </head>
-<body id="body-h">
-
-
-<!-- navbar -->
-<nav class="navbar navbar-expand-lg navbar-light py-2 fixed-top border-1">
+<body>
+<!-- Navbar محسّن -->
+<nav class="navbar navbar-expand-lg fixed-top py-3" style="background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: all 0.3s;">
   <div class="container">
-    <a class="navbar-brand" href="#" style="color:#3ec15b;"><span class="text-warning">مطعم</span>&nbsp;الزمن القديم</a>
-    <button class="navbar-toggler border-0 bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+      <img src="img/logo.png" alt="مطعمي" width="50" height="50" class="rounded-circle border border-2 border-light shadow-sm">
+      <span style="font-weight:800; font-size:1.5rem; color:#d35400;">مطعم الزمن القديم</span>
+    </a>
+
+    <!-- Toggler -->
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse order-lg-1" id="navMenu" dir="rtl">
-      <ul class="navbar-nav mx-auto text-end">
-        <li class="nav-item py-2">
-          <a class="nav-link text-uppercase" href="index.html">الرئيسية</a>
-        </li>
-  
-        <li class="nav-item dropdown py-2">
-          <a class="nav-link dropdown-toggle text-uppercase" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-       الأصناف
-          </a>
-          <ul class="dropdown-menu text-end" aria-labelledby="navbarDropdown">
-             <li><a class="dropdown-item" href="view_category.html?category=جديدنا">جــــديدنا</a></li>
-            <li><a class="dropdown-item" href="view_category.html?category=all">كل الأصناف</a></li>
-            <li><a class="dropdown-item" href="view_category.html?category=اصناف مميزة">اصناف مميزة</a></li>
-            <li><a class="dropdown-item" href="view_category.html?category=مطبق">مطبق</a></li>
-            <li><a class="dropdown-item" href="view_category.html?category=عريكة">عريكة</a></li>
-            <li><a class="dropdown-item" href="view_category.html?category=معصوب">معصوب</a></li>
+    <!-- Links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto gap-3 align-items-center">
 
-            <li><a class="dropdown-item" href="view_category.html?category=فول">فول</a></li>
-            <li><a class="dropdown-item" href="view_category.html?category=فاصولياء">فاصولياء</a></li>
-            <li><a class="dropdown-item" href="view_category.html?category=بيض">بــيض</a></li>
-            <li><a class="dropdown-item" href="view_category.html?category=فطائر">فطائر</a></li>
-            <li><a class="dropdown-item" href="view_category.html?category=وجبات منوعة">وجبات منوعة</a></li>
+        <li class="nav-item"><a class="nav-link text-dark fw-semibold" href="index.html">الرئيسية</a></li>
+
+        <!-- Dropdown للأصناف -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-dark fw-semibold" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            الأصناف
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="categoriesDropdown" id="categoriesMenu">
+            <!-- يتم توليد الفئات هنا بالـ JS -->
           </ul>
         </li>
-        <li class="nav-item py-2">
-          <a class="nav-link text-uppercase"href="view_category.html?category=all">كل الاصناف</a>
-        </li>
-        <li class="nav-item py-2">
-          <a class="nav-link text-uppercase" href="#contact">من نحن؟</a>
-        </li>
-        <li class="nav-item py-2 border-0">
-          <a class="nav-link text-uppercase" href="#contact">اتصل بنا</a>
-        </li>
-      </ul>
-     <!-- سلة التسوق -->
-<div class="d-flex align-items-center">
-  <button class="btn" id="cartButton" onclick="goToCart()">
-      <i class="fas fa-shopping-cart" style="font-size: 24px;"></i>
-      <span id="cartCount" class="badge bg-warning text-dark">0</span> <!-- الرقم هنا هو 0 -->
-  </button>        
-</div>
 
-    </div>
+        <li class="nav-item"><a class="nav-link text-dark fw-semibold" href="categories.html?cat=all">كل الأصناف</a></li>
+        <li class="nav-item"><a class="nav-link text-dark fw-semibold" href="#about">من نحن؟</a></li>
+        <li class="nav-item"><a class="nav-link text-dark fw-semibold" href="#contact">اتصل بنا</a></li>
+
+        <!-- أيقونة السلة -->
+        <li class="nav-item">
+          <a href="javascript:void(0);" onclick="goToCart()" class="position-relative text-dark" style="font-size:1.5rem;">
+            <i class="bi bi-cart3"></i>
+            <span id="cartCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              0
+            </span>
+          </a>
+        </li>
+
+      </ul>
     </div>
   </div>
 </nav>
-<!-- end of navbar -->
 
-  <!-- ======= Hero Section ======= -->
-<!-- ======= Hero Section ======= -->
-<section id="hero" class="hero">
-  <div class="container position-relative">
-    <div class="row gy-5" data-aos="fade-in">
-      <div class="col-lg-6 order-2 order-lg-1  justify-content-center text-center text-lg-end">
-        <p class="font-italic" style="font-size:1.5rem;color:#3ec15b;">وجبات مميزة وأكلات شعبية ضخمة</p>
-        <h2>مطعم الزمن القديم &nbsp;<span>أفضل مطعم للأكلات الشعبية</span></h2>
-        <p class="carousel-text" id="typing-effect1" style="font-size:1.5rem;"></p>
-        <div class="d-flex justify-content-center justify-content-lg-start">
-          <a href="https://wa.me/+966507079844" class="btn-get-started" style="background-color:#3A6B92;">اطلب الان</a>
-      
-        </div>
-      </div>
 
-     <!-- Carousel for Images -->
-<!-- Carousel for Images -->
-<div class="col-lg-6 order-1 order-lg-2">
-  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner" id="carousel-inner" style="border-radius:40px;">
-      <!-- يتم تحميل الصور هنا -->
+<!-- Hero Carousel -->
+<!-- Hero Carousel -->
+<section class="hero-section position-relative">
+  <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner" id="carouselInner">
+      <!-- سيتم توليد الشرائح ديناميكياً من JSON -->
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
+
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+      <span class="visually-hidden">السابق</span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+      <span class="visually-hidden">التالي</span>
     </button>
+
+    <!-- Indicators -->
+    <div class="carousel-indicators" id="carouselIndicators"></div>
   </div>
-</div>
+</section>
 
 
+
+<!-- Recently Added / المضاف مؤخراً -->
+<section class="container my-4" id="new">
+  <div class="category-section">
+    <div class="category-header mb-3">
+      <h5><i class="bi bi-clock-history"></i> المضاف مؤخراً</h5>
+      <div class="d-flex gap-2 flex-wrap" style="align-items:center;">
+        <input type="text" id="searchInput" class="form-control form-control-sm" placeholder="بحث بالاسم...">
+        <select id="categoryFilter" class="form-select form-select-sm">
+          <!-- الخيارات سيتم توليدها ديناميكياً -->
+        </select>
+      </div>
+    </div>
+    <div class="d-flex flex-wrap gap-3" id="recentContent">
+      <!-- المحتوى سيتم توليده عبر JS -->
     </div>
   </div>
-  
-    </div>
-  </section>
-  <!-- End Hero Section -->
-
-  <div class="container mt-4">
-    <div class="d-flex overflow-x-auto justify-content-start" style="max-width: 100%; padding:5px;background-color: #fff;
-    border: .1rem solid rgba(0,0,0,.1);">
-        <div class="text-center m-1">
-          <a href="view_category.html?category=جديدنا" class="text-decoration-none text-white btn btn-food-filter"">جـديدنا</a>
-        </div>
-
-      <div class="text-center m-1">
-        <a href="view_category.html?category=all" class="text-decoration-none text-white btn btn-food-filter"">كل الاصناف</a>
-      </div>
-      <div class="text-center m-1">
-          <a href="view_category.html?category=اصناف مميزة" class="text-decoration-none text-white btn btn-food-filter">
-            اصناف مميزة
-          </a>
-      </div>
-      
-      <!-- فلتر للمنازل -->
-      <div class="text-center m-1">
-          <a href="view_category.html?category=مطبق" class="text-decoration-none text-white btn btn-food-filter">
-             مطبق
-          </a>
-      </div>
-      
-      <!-- فلتر للفلل -->
-      <div class="text-center m-1">
-          <a href="view_category.html?category=عريكة" class="text-decoration-none text-white btn btn-food-filter">
-             عريكة
-          </a>
-      </div>
-      
-      <!-- فلتر للشقق -->
-      <div class="text-center m-1">
-          <a href="view_category.html?category=معصوب" class="text-decoration-none text-white btn btn-food-filter">
-              معصوب
-          </a>
-      </div>
-
-       <!-- فلتر للشقق -->
-       <div class="text-center m-1">
-        <a href="view_category.html?category=فول" class="text-decoration-none text-white btn btn-food-filter">
-            فول
-        </a>
-    </div>
-
-     <!-- فلتر للشقق -->
-     <div class="text-center m-1">
-      <a href="view_category.html?category=فاصولياء" class="text-decoration-none text-white btn btn-food-filter">
-          فاصولياء
-      </a>
-  </div>
-
-   <!-- فلتر للشقق -->
-   <div class="text-center m-1">
-    <a href="view_category.html?category=بيض" class="text-decoration-none text-white btn btn-food-filter">
-        بيض
-    </a>
-</div>
-
-   <!-- فلتر للشقق -->
-   <div class="text-center m-1">
-    <a href="view_category.html?category=فطائر" class="text-decoration-none text-white btn btn-food-filter">
-        فطائر
-    </a>
-</div>
- <!-- فلتر للشقق -->
- <div class="text-center m-1">
-  <a href="view_category.html?category=وجبات منوعة" class="text-decoration-none text-white btn btn-food-filter">
-      وجبات منوعة
-  </a>
-</div>
-    </div>
-  </div>
-
- <!-- end of header -->
-<section id="card_home" class="card_home">
-<div class="section-t" id="house">
-<div>
-<h4>جـــديدنا</h4>
-</div>
-
-<div class="view_all">
-<a href="view_category.html?category=جديدنا"><h2><i class="bi bi-arrow-left"></i></h2></a>
-</div>
-</div>
-
-<!--section-title starts-->
-<div class="main">
-<div class="container swiper">
-<div class="slider-wrapper">
-<div class="card-list swiper-wrapper" id="mynews">
-
-
-</div>
-</div>
-<div class="swiper-pagination"></div>
-<div class="swiper-slide-button swiper-button-prev"></div>
-<div class="swiper-slide-button swiper-button-next"></div>
-</div>
-</div>
-</div>
 </section>
-<!-- end card home -->
- 
-  <!-- end of header -->
-<section id="card_home" class="card_home">
-<div class="section-t" id="all">
-<div>
-<h4>كل الاصناف</h4>
-</div>
-
-<div class="view_all">
-<a href="view_category.html?category=all"><h2><i class="bi bi-arrow-left"></i></h2></a>
-</div>
-</div>
-
-<!--section-title starts-->
-<div class="main">
-<div class="container swiper">
-<div class="slider-wrapper">
-<div class="card-list swiper-wrapper" id="card-all">
-
-
-</div>
-</div>
-<div class="swiper-pagination"></div>
-<div class="swiper-slide-button swiper-button-prev"></div>
-<div class="swiper-slide-button swiper-button-next"></div>
-</div>
-</div>
-</div>
-</section>
-<!-- end card home -->
-
-
-  <!-- end of header -->
-<section id="card_home" class="card_home">
-<div class="section-t" id="cat1">
-<div>
-<h4>اصناف مميزة</h4>
-</div>
-
-<div class="view_all">
-  <a href="view_category.html?category=اصناف مميزة"><h2><i class="bi bi-arrow-left"></i></h2></a>
-</div>
-</div>
-
-<!--section-title starts-->
-<div class="main">
-<div class="container swiper">
-<div class="slider-wrapper">
-<div class="card-list swiper-wrapper" id="card-container">
-
-
-</div>
-</div>
-<div class="swiper-pagination"></div>
-<div class="swiper-slide-button swiper-button-prev"></div>
-<div class="swiper-slide-button swiper-button-next"></div>
-</div>
-</div>
-</div>
-</section>
-<!-- end card home -->
 
 
 
- <!-- home_card -->
-<section id="card_home" class="card_home">
-<div class="section-t" id="house">
-<div>
-<h4>مطبق</h4>
-</div>
-
-<div class="view_all">
-  <a href="view_category.html?category=مطبق"><h2><i class="bi bi-arrow-left"></i></h2></a>
-</div>
-</div>
-
-<!--section-title starts-->
-<div class="main">
-<div class="container swiper">
-<div class="slider-wrapper">
-<div class="card-list swiper-wrapper" id="card-container2">
-
-</div>
-</div>
-<div class="swiper-pagination"></div>
-<div class="swiper-slide-button swiper-button-prev"></div>
-<div class="swiper-slide-button swiper-button-next"></div>
-</div>
-</div>
-</div>
-</section>
-<!-- end card home -->
-
-<!-- home_card -->
-<section id="card_home" class="card_home">
-<div class="section-t" id="house">
-<div>
-<h4>عريكة</h4>
-</div>
-
-<div class="view_all">
-  <a href="view_category.html?category=عريكة"><h2><i class="bi bi-arrow-left"></i></h2></a>
-</div>
-</div>
-
-<!--section-title starts-->
-<div class="main">
-<div class="container swiper">
-<div class="slider-wrapper">
-<div class="card-list swiper-wrapper" id="card-container3">
-
-</div>
-</div>
-<div class="swiper-pagination"></div>
-<div class="swiper-slide-button swiper-button-prev"></div>
-<div class="swiper-slide-button swiper-button-next"></div>
-</div>
-</div>
-</div>
-</section>
-<!-- end card home -->
-
-<!-- home_card -->
-<section id="card_home" class="card_home">
-<div class="section-t" id="house">
-<div>
-<h4>معصوب</h4>
-</div>
-
-<div class="view_all">
-  <a href="view_category.html?category=معصوب"><h2><i class="bi bi-arrow-left"></i></h2></a>
-</div>
-</div>
-
-<!--section-title starts-->
-<div class="main">
-<div class="container swiper">
-<div class="slider-wrapper">
-<div class="card-list swiper-wrapper" id="card-container4">
-
-</div>
-</div>
-<div class="swiper-pagination"></div>
-<div class="swiper-slide-button swiper-button-prev"></div>
-<div class="swiper-slide-button swiper-button-next"></div>
-</div>
-</div>
-</div>
-</section>
-<!-- end card home -->
-
-
-<!-- home_card -->
-<section id="card_home" class="card_home">
-<div class="section-t" id="house">
-<div>
-<h4>فول</h4>
-</div>
-
-<div class="view_all">
-  <a href="view_category.html?category=فول"><h2><i class="bi bi-arrow-left"></i></h2></a>
-</div>
-</div>
-
-<!--section-title starts-->
-<div class="main">
-<div class="container swiper">
-<div class="slider-wrapper">
-<div class="card-list swiper-wrapper" id="card-container5">
-
-</div>
-</div>
-<div class="swiper-pagination"></div>
-<div class="swiper-slide-button swiper-button-prev"></div>
-<div class="swiper-slide-button swiper-button-next"></div>
-</div>
-</div>
-</div>
-</section>
-<!-- end card home -->
-
-<!-- home_card -->
-<section id="card_home" class="card_home">
-<div class="section-t" id="house">
-<div>
-<h4>فاصولياء</h4>
-</div>
-
-<div class="view_all">
-  <a href="view_category.html?category=فاصولياء"><h2><i class="bi bi-arrow-left"></i></h2></a>
-</div>
-</div>
-
-<!--section-title starts-->
-<div class="main">
-<div class="container swiper">
-<div class="slider-wrapper">
-<div class="card-list swiper-wrapper" id="card-container6">
-
-</div>
-</div>
-<div class="swiper-pagination"></div>
-<div class="swiper-slide-button swiper-button-prev"></div>
-<div class="swiper-slide-button swiper-button-next"></div>
-</div>
-</div>
-</div>
-</section>
-<!-- end card home -->
-
-<!-- home_card -->
-<section id="card_home" class="card_home">
-  <div class="section-t" id="house">
-  <div>
-  <h4>بــيض</h4>
+<div class="container my-4" id="dynamicCategories"></div>
+ <!-- About Section -->
+<section class="about-section text-center py-5 bg-light" id="about">
+  <div class="container">
+    <h2 class="display-4 fw-bold mb-4">من نحن</h2>
+    <p class="lead mb-4">
+      مرحبًا بكم في مطعم الزمن القديم، حيث نقدم لكم أشهى المأكولات الشعبية التي تعكس تراثنا العريق.
+      في مطعمنا، نستمتع بتقديم الأطباق التقليدية باستخدام أفضل المكونات الطازجة وبأسلوب طهي أصيل.
+      نحن هنا لنأخذكم في رحلة عبر الزمن مع كل لقمة، ونقدم لكم تجربة طعام مميزة تنبض بالنكهة والذكريات.
+    </p>
+    <a href="#dynamicCategories" class="btn btn-main btn-lg">استعرض قائمتنا</a>
   </div>
-  
-  <div class="view_all">
-    <a href="view_category.html?category=بيض"><h2><i class="bi bi-arrow-left"></i></h2></a>
-  </div>
-  </div>
-  
-  <!--section-title starts-->
-  <div class="main">
-  <div class="container swiper">
-  <div class="slider-wrapper">
-  <div class="card-list swiper-wrapper" id="eggs">
-  
-  </div>
-  </div>
-  <div class="swiper-pagination"></div>
-  <div class="swiper-slide-button swiper-button-prev"></div>
-  <div class="swiper-slide-button swiper-button-next"></div>
-  </div>
-  </div>
-  </div>
-  </section>
-  <!-- end card home -->
-
-<!-- home_card -->
-<section id="card_home" class="card_home">
-<div class="section-t" id="house">
-<div>
-<h4>فطائر</h4>
-</div>
-
-<div class="view_all">
-  <a href="view_category.html?category=فطائر"><h2><i class="bi bi-arrow-left"></i></h2></a>
-</div>
-</div>
-
-<!--section-title starts-->
-<div class="main">
-<div class="container swiper">
-<div class="slider-wrapper">
-<div class="card-list swiper-wrapper" id="card-container7">
-
-</div>
-</div>
-<div class="swiper-pagination"></div>
-<div class="swiper-slide-button swiper-button-prev"></div>
-<div class="swiper-slide-button swiper-button-next"></div>
-</div>
-</div>
-</div>
 </section>
-<!-- end card home -->
-
-<!-- home_card -->
-<section id="card_home" class="card_home">
-<div class="section-t" id="house">
-<div>
-<h4>وجبات منوعة</h4>
-</div>
-
-<div class="view_all">
-  <a href="view_category.html?category=وجبات منوعة"><h2><i class="bi bi-arrow-left"></i></h2></a>
-</div>
-</div>
-
-<!--section-title starts-->
-<div class="main">
-<div class="container swiper">
-<div class="slider-wrapper">
-<div class="card-list swiper-wrapper" id="card-container8">
-
-</div>
-</div>
-<div class="swiper-pagination"></div>
-<div class="swiper-slide-button swiper-button-prev"></div>
-<div class="swiper-slide-button swiper-button-next"></div>
-</div>
-</div>
-</div>
-</section>
-<!-- end card home -->
 
 <!-- Footer -->
-<footer id="contact">
-  <div class="footer-content">
-    <div>
-      <h3>من نحن ؟</h3>
-      <ol type="A">
-          <li><p>مرحبًا بكم في مطعم الزمن القديم، حيث نقدم لكم أشهى المأكولات الشعبية التي تعكس تراثنا العريق. في مطعمنا، نستمتع بتقديم الأطباق التقليدية باستخدام أفضل المكونات الطازجة وبأسلوب طهي أصيل. نحن هنا لنأخذكم في رحلة عبر الزمن مع كل لقمة، ونقدم لكم تجربة طعام مميزة تنبض بالنكهة والذكريات.
-
-            أهلاً بكم في عالم الطعم الأصيل!</p></li>
-        
-      </ol>
-  </div>
-
-      <div>
-          <h3>معلومات التواصل:</h3>
-          <ol>
-              <li>الهاتف:966507079844</li>
-          </ol>
+<footer class="bg-dark text-light pt-5" id="contact">
+  <div class="container">
+    <div class="row mb-4">
+      <div class="col-md-3">
+        <h5 class="fw-bold mb-3">مطعم الزمن القديم</h5>
+        <p>أفضل المأكولات الشعبية بخدمة راقية وجودة عالية، تجربة تذوق لا تنسى.</p>
       </div>
-
-      <div>
-        <h3>الموقع:</h3>
-        <ol>
-            <li>مكة-العتيبية-شارع الحجون-خلف اسكريم الوفاء</li>
-        </ol>
+      <div class="col-md-3">
+        <h5 class="fw-bold mb-3">روابط سريعة</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-light text-decoration-none">القائمة</a></li>
+          <li><a href="#" class="text-light text-decoration-none">العروض</a></li>
+          <li><a href="#" class="text-light text-decoration-none">الطلبات</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h5 class="fw-bold mb-3">معلومات التواصل</h5>
+        <ul class="list-unstyled">
+          <li>الهاتف: +966507079844</li>
+          <li>البريد الإلكتروني: info@oldtimefood.com</li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h5 class="fw-bold mb-3">الموقع</h5>
+        <p>مكة-العتيبية-شارع الحجون-خلف اسكريم الوفاء</p>
+        <div class="d-flex gap-2 mt-2">
+          <a href="#" class="text-danger fs-4"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-primary fs-4"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-info fs-4"><i class="bi bi-twitter"></i></a>
+        </div>
+      </div>
     </div>
+    <hr class="border-light">
+    <p class="text-center mb-0">&copy; 2025 جميع الحقوق محفوظة لموقع مطعم الزمن القديم</p>
   </div>
-  <hr>
-  <p>&copy;2025 جميع الحقوق محفوظة لموقع مطعم الزمن القديم</p><br>
 </footer>
 
-
-
-
-
-
-<!-- jquery -->
-<script src = "js/jquery-3.6.0.js"></script>
-<!-- bootstrap js -->
-<script src = "js/bootstrap.min.js"></script>
-<!-- custom js -->
- <!-- Linking SwiperJS script -->
- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-   <script src="js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
-// وظيفة لتوجيه المستخدم إلى صفحة السلة
+  // وظيفة لتوجيه المستخدم إلى صفحة السلة
 function goToCart() {
     // يمكنك تغيير "cart.html" إلى المسار الذي يتوافق مع صفحة السلة في موقعك
     window.location.href = 'cart.html'; 
 }
 
-  // قائمة السلة (قد تكون مخزنة في localStorage أو عبر الجلسة)
-let cart = JSON.parse(localStorage.getItem('cart')) || []; // استرجاع السلة من localStorage أو إنشاء سلة فارغة
+const dynamicContainer = document.getElementById("dynamicCategories");
+let recentItems = [];
 
-// وظيفة لإضافة منتج إلى السلة
+// تحميل البيانات من JSON
+async function loadItems() {
+  try {
+    const response = await fetch('info.json');
+    const data = await response.json();
+
+    // تحميل الكاروسيل
+    if (Array.isArray(data.carousel)) displayCarousel(data.carousel);
+
+    // تحميل المنتجات
+    if (Array.isArray(data.items)) {
+      recentItems = data.items.sort((a,b) => new Date(b.timestamp) - new Date(a.timestamp));
+      displayCategories(recentItems);
+      populateRecentFilter(recentItems);
+      displayRecentItems(recentItems);
+    }
+
+  } catch (err) {
+    console.error("خطأ في جلب البيانات:", err);
+  }
+}
+
+// عرض الكاروسيل
+function displayCarousel(carouselItems) {
+  const carouselInner = document.getElementById("carouselInner");
+  const carouselIndicators = document.getElementById("carouselIndicators");
+  carouselInner.innerHTML = "";
+  carouselIndicators.innerHTML = "";
+
+  carouselItems.forEach((slide, index) => {
+    const item = document.createElement("div");
+    item.className = "carousel-item" + (index === 0 ? " active" : "");
+    item.innerHTML = `
+      <img src="${slide.image}" class="d-block w-100" alt="Slide ${index+1}">
+      <div class="carousel-caption d-flex flex-column justify-content-center align-items-center text-center">
+        <h1 class="fw-bold animate__animated animate__fadeInDown">أهلاً بك في مطعمنا</h1>
+        <p class="animate__animated animate__fadeInUp">استمتع بأشهى الأطباق</p>
+        <a href="#new" class="btn btn-main btn-lg animate__animated animate__zoomIn">استعرض القائمة</a>
+      </div>
+    `;
+    carouselInner.appendChild(item);
+
+    const indicator = document.createElement("button");
+    indicator.type = "button";
+    indicator.setAttribute("data-bs-target", "#heroCarousel");
+    indicator.setAttribute("data-bs-slide-to", index);
+    if (index === 0) indicator.classList.add("active");
+    carouselIndicators.appendChild(indicator);
+  });
+}
+
+// عرض الأقسام
+function displayCategories(items) {
+  dynamicContainer.innerHTML = "";
+  const categories = [...new Set(items.map(item => item.category?.trim()))];
+  categories.forEach(cat => {
+    const section = document.createElement("div");
+    section.className = "category-section mb-5";
+
+    const header = document.createElement("div");
+    header.className = "category-header d-flex justify-content-between align-items-center mb-3";
+    header.innerHTML = `
+      <h5><i class="bi bi-tags"></i> ${cat}</h5>
+      <a href="categories.html?cat=${encodeURIComponent(cat)}" class="btn btn-main btn-sm">عرض الكل</a>
+    `;
+    section.appendChild(header);
+
+    const content = document.createElement("div");
+    content.className = "d-flex flex-wrap gap-3";
+
+    const itemsOfCat = items.filter(item => item.category?.trim() === cat).slice(0, 6);
+    itemsOfCat.forEach(item => {
+      const card = document.createElement("div");
+      card.className = "category-card";
+
+      const shortDesc = item.description ? (item.description.length > 20 ? item.description.substring(0,20) + "..." : item.description) : "";
+
+      card.innerHTML = `
+      <div class="product-card h-100 d-flex flex-column">
+        <img src="${item.images}" class="product-img" alt="${item.food_name}">
+        <div class="product-body flex-grow-1 d-flex flex-column justify-content-between">
+          <div>
+            <h5>${item.food_name}</h5>
+            <p>${shortDesc}</p>
+          </div>
+          <div class="d-flex justify-content-between align-items-center mt-2">
+            <span class="price">
+          ${item.price} <img src="img/ryal.png" style="width:25px;height:25px; vertical-align: middle; margin-left: 5px;" alt="مطعم الزمن القديم افضل مطعم شعبي في السعودية ومكة المكرمة">
+              </span>
+            <div class="d-flex gap-2">
+              <a href="details.html?fId=${item.id}" class="btn btn-sm btn-outline-secondary">التفاصيل</a>
+              <button class="btn btn-sm btn-cart" onclick='addToCart(${JSON.stringify(item)})'>
+                <i class="bi bi-cart-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      `;
+      content.appendChild(card);
+    });
+
+    section.appendChild(content);
+    dynamicContainer.appendChild(section);
+  });
+}
+
+// قسم المضاف مؤخراً
+const contentContainer = document.getElementById("recentContent");
+const searchInput = document.getElementById("searchInput");
+const categoryFilter = document.getElementById("categoryFilter");
+
+function populateRecentFilter(items) {
+  const categories = ["", "all", ...new Set(items.map(item => item.category?.trim()).filter(c => c))];
+  categoryFilter.innerHTML = "";
+  categories.forEach(cat => {
+    const option = document.createElement("option");
+    option.value = cat;
+    option.textContent = cat === "" ? "اختيار فئة" : cat === "all" ? "كل الفئات" : cat;
+    categoryFilter.appendChild(option);
+  });
+}
+
+// إنشاء بطاقة المنتج
+function createRecentCard(item) {
+  const card = document.createElement("div");
+  card.className = "category-card";
+
+  const shortDesc = item.description ? (item.description.length > 50 ? item.description.substring(0,50) + "..." : item.description) : "";
+
+  card.innerHTML = `
+    <div class="product-card h-100 d-flex flex-column">
+      <img src="${item.images}" class="product-img" alt="${item.food_name}">
+      <div class="product-body flex-grow-1 d-flex flex-column justify-content-between">
+        <div>
+          <h5>${item.food_name}</h5>
+          <p>${shortDesc}</p>
+        </div>
+        <div class="d-flex justify-content-between align-items-center mt-2">
+          <span class="price">
+          ${item.price} <img src="img/ryal.png" style="width:25px;height:25px; vertical-align: middle; margin-left: 5px;" alt="مطعم الزمن القديم افضل مطعم شعبي في السعودية ومكة المكرمة">
+              </span>
+          <div class="d-flex gap-2">
+            <a href="details.html?fId=${item.id}" class="btn btn-sm btn-outline-secondary">التفاصيل</a>
+            <button class="btn btn-sm btn-cart" onclick='addToCart(${JSON.stringify(item)})'>
+              <i class="bi bi-cart-plus"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+  contentContainer.appendChild(card);
+}
+
+// عرض المنتجات حسب الفلتر
+function displayRecentItems(items, limitRandom = 6) {
+  contentContainer.innerHTML = "";
+  if (items.length === 0) {
+    contentContainer.innerHTML = "<p>لا توجد عناصر مطابقة.</p>";
+    return;
+  }
+
+  const selectedCategory = categoryFilter.value?.trim();
+
+  if (!selectedCategory) {
+    const shuffled = [...items].sort(() => 0.5 - Math.random()).slice(0, limitRandom);
+    shuffled.forEach(item => createRecentCard(item));
+  } else if (selectedCategory === "all") {
+    items.forEach(item => createRecentCard(item));
+  } else {
+    const filteredItems = items.filter(item => item.category?.trim() === selectedCategory);
+    filteredItems.forEach(item => createRecentCard(item));
+  }
+}
+
+// دالة الفلترة
+function filterItems() {
+  const searchText = searchInput.value.toLowerCase();
+  const selectedCategory = categoryFilter.value?.trim();
+
+  let filtered = recentItems.filter(item => item.food_name.toLowerCase().includes(searchText));
+
+  if (selectedCategory && selectedCategory !== "all") {
+    filtered = filtered.filter(item => item.category?.trim() === selectedCategory);
+  }
+
+  displayRecentItems(filtered);
+}
+
+// أحداث الفلترة
+searchInput.addEventListener("input", filterItems);
+categoryFilter.addEventListener("change", filterItems);
+
+// عند التحميل
+categoryFilter.value = "";
+window.onload = loadItems;
+
+// وظيفة السلة
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
 function addToCart(product) {
-    // إضافة المنتج إلى السلة
     cart.push(product);
-    
-    // حفظ السلة في localStorage
     localStorage.setItem('cart', JSON.stringify(cart));
-    
-    // تحديث العداد
     updateCartCount();
 }
-
-// وظيفة لتحديث العداد بناءً على عدد المنتجات في السلة
 function updateCartCount() {
-    // تحديث الرقم في عنصر العداد
     let cartCount = document.getElementById('cartCount');
-    cartCount.textContent = cart.length; // تحديث النص ليكون عدد المنتجات في السلة
+    if(cartCount) cartCount.textContent = cart.length;
 }
+document.addEventListener('DOMContentLoaded', updateCartCount);
 
-// استدعاء دالة لتحديث العداد عندما يتم تحميل الصفحة
-document.addEventListener('DOMContentLoaded', function() {
-    updateCartCount(); // تحديث العداد بناءً على السلة عند تحميل الصفحة
-});
-
+// توليد قائمة الأصناف في الـ Dropdown
+async function loadCategoriesForNavbar() {
+  try {
+    const response = await fetch('info.json');
+    const data = await response.json();
+    if (Array.isArray(data.items)) {
+      const categories = [...new Set(data.items.map(item => item.category?.trim()))];
+      const menu = document.getElementById("categoriesMenu");
+      categories.forEach(cat => {
+        let li = document.createElement("li");
+        li.innerHTML = `<a class="dropdown-item" href="categories.html?cat=${encodeURIComponent(cat)}">${cat}</a>`;
+        menu.appendChild(li);
+      });
+    }
+  } catch (err) {
+    console.error("خطأ في تحميل الفئات:", err);
+  }
+}
+document.addEventListener("DOMContentLoaded", loadCategoriesForNavbar);
 </script>
+
 </body>
 </html>
