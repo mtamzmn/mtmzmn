@@ -147,6 +147,11 @@ async function proceedToCheckout() {
     // فتح رابط واتساب مع تفاصيل الطلب
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(orderDetails)}`;
     window.open(whatsappUrl, '_blank');
+    
+    // بعد إرسال الطلب، مسح السلة
+    localStorage.removeItem('cart');
+    cart = [];
+    displayCart();  // تحديث واجهة السلة
   } catch (err) {
     console.error("خطأ في جلب بيانات الاتصال:", err);
     alert("حدث خطأ أثناء محاولة فتح الواتساب.");
@@ -164,3 +169,4 @@ window.onload = displayCart;
 
 </body>
 </html>
+
