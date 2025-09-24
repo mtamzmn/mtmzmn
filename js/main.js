@@ -1,21 +1,25 @@
-// main.js
+// ======================
+// إعدادات عامة
+// ======================
+const API_URL = "https://mtamcpnael.shop/api.php"; 
+const dynamicContainer = document.getElementById("dynamicCategories");
+const contentContainer = document.getElementById("recentContent");
+const searchInput = document.getElementById("searchInput");
+const categoryFilter = document.getElementById("categoryFilter");
+let recentItems = [];
 
 // ======================
 // تحميل بيانات SEO من data.json
 // ======================
-const API_URL = "https://mtamcpnael.shop/api.php"; 
 async function loadSeoData() {
   try {
-    // إظهار الـ Loader أثناء تحميل البيانات
     document.getElementById('loader').style.display = 'flex';
-
     const response = await fetch(API_URL);
     const data = await response.json();
     const setting = data.setting || {};
-
     if (!setting) return;
 
-    // الميتا الأساسية
+    // العنوان والكلمات المفتاحية والوصف
     document.title = setting.title || '';
     const metaTags = [
       { selector: 'meta[name="keywords"]', value: setting.keywords },
@@ -23,7 +27,6 @@ async function loadSeoData() {
       { selector: 'meta[name="description"]', value: setting.description },
       { selector: 'meta[name="robots"]', value: setting.robots }
     ];
-
     metaTags.forEach(tag => {
       const el = document.querySelector(tag.selector);
       if (el && tag.value) el.setAttribute("content", tag.value);
@@ -38,7 +41,7 @@ async function loadSeoData() {
       document.head.appendChild(favicon);
     }
 
-    // اسم الموقع في الصفحة
+    // اسم الموقع
     document.querySelectorAll('.site-name').forEach(el => {
       el.textContent = setting.site_name || '';
     });
@@ -83,7 +86,6 @@ async function loadSeoData() {
     // بيانات إضافية
     if (setting.additional_metadata) {
       const meta = setting.additional_metadata;
-
       if (meta.sitemap) {
         const sitemapLink = document.createElement('link');
         sitemapLink.rel = 'sitemap';
@@ -91,7 +93,6 @@ async function loadSeoData() {
         sitemapLink.href = meta.sitemap;
         document.head.appendChild(sitemapLink);
       }
-
       if (meta.apple_touch_icon) {
         const appleIconLink = document.createElement('link');
         appleIconLink.rel = 'apple-touch-icon';
@@ -99,7 +100,6 @@ async function loadSeoData() {
         appleIconLink.href = meta.apple_touch_icon;
         document.head.appendChild(appleIconLink);
       }
-
       if (meta.meta_copyright) {
         const copyrightMeta = document.createElement('meta');
         copyrightMeta.name = 'copyright';
@@ -111,7 +111,6 @@ async function loadSeoData() {
   } catch (error) {
     console.error("خطأ في تحميل بيانات SEO:", error);
   } finally {
-    // إخفاء الـ Loader بعد تحميل البيانات
     document.getElementById('loader').style.display = 'none';
   }
 }
@@ -119,52 +118,34 @@ async function loadSeoData() {
 // ======================
 // تحميل وعرض البيانات الرئيسية
 // ======================
-const dynamicContainer = document.getElementById("dynamicCategories");
-let recentItems = [];
-
 async function loadItems() {
   try {
-    // إظهار الـ Loader أثناء تحميل البيانات
     document.getElementById('loader').style.display = 'flex';
-
     const response = await fetch(API_URL);
     const data = await response.json();
 
-    // Carousel
-    if (data.site_sections?.hero?.items && Array.isArray(data.site_sections.hero.items)) {
+    if (data.site_sections?.hero?.items) {
       displayCarousel(data.site_sections.hero.items);
     }
-
-    // About
-    if (data.site_sections?.about) displayAbout(data.site_sections.about);
-
-    // Footer
+    if (data.site_sections?.about) {
+      displayAbout(data.site_sections.about);
+    }
     if (data.site_sections?.footer && data.site_sections?.contact) {
       displayFooter(data.site_sections.footer, data.site_sections.contact, data.categories || []);
     }
-
-    // المنتجات
     if (Array.isArray(data.items)) {
       recentItems = data.items.sort((a,b) => new Date(b.timestamp) - new Date(a.timestamp));
       displayCategories(recentItems);
       populateRecentFilter(recentItems);
       displayRecentItems(recentItems);
     }
-
   } catch (err) {
     console.error("خطأ في جلب البيانات:", err);
   } finally {
-    // إخفاء الـ Loader بعد تحميل البيانات
     document.getElementById('loader').style.display = 'none';
   }
 }
 
-// ======================
-// توجيه المستخدم إلى صفحة السلة
-// ======================
-function goToCart() {
-  window.location.href = 'cart.html';
-}
 // ======================
 // عرض Carousel
 // ======================
@@ -176,7 +157,6 @@ function displayCarousel(carouselItems) {
 
   carouselItems.forEach((slide, index) => {
     const imageSrc = slide.image && slide.image !== "#" ? slide.image : "img/placeholder.png";
-
     const item = document.createElement("div");
     item.className = "carousel-item" + (index === 0 ? " active" : "");
     item.innerHTML = `
@@ -209,9 +189,7 @@ function displayAbout(aboutData) {
     ${
       aboutData.image 
       ? `<div class="text-center">
-           <img src="${aboutData.image}" 
-                class="img-fluid rounded shadow-sm mb-4 about-img" 
-                alt="About">
+           <img src="${aboutData.image}" class="img-fluid rounded shadow-sm mb-4 about-img" alt="About">
          </div>` 
       : ''
     }
@@ -219,14 +197,12 @@ function displayAbout(aboutData) {
   `;
 }
 
-
 // ======================
 // Footer Section
 // ======================
 function displayFooter(footerData, contactData, categories = []) {
   const container = document.getElementById("footerContainer");
   let linksHtml = '';
-
   if (categories.length > 0) {
     linksHtml = '<ul class="list-unstyled">';
     categories.slice(0, 5).forEach(cat => {
@@ -234,7 +210,6 @@ function displayFooter(footerData, contactData, categories = []) {
     });
     linksHtml += '</ul>';
   }
-
   container.innerHTML = `
     <div class="row mb-4">
       <div class="col-md-3">
@@ -269,7 +244,6 @@ function displayFooter(footerData, contactData, categories = []) {
 // ======================
 function displayCategories(items) {
   dynamicContainer.innerHTML = "";
-
   const categoriesMap = {};
   items.forEach(item => {
     const cat = item.category?.trim() || 'غير مصنف';
@@ -298,7 +272,6 @@ function displayCategories(items) {
       card.className = "category-card";
       const shortDesc = item.description ? (item.description.length > 20 ? item.description.substring(0, 20) + "..." : item.description) : "";
       const imgSrc = item.images || 'img/placeholder.png';
-
       card.innerHTML = `
         <div class="product-card h-100 d-flex flex-column">
           <img src="${imgSrc}" class="product-img" alt="${item.food_name || 'منتج'}">
@@ -311,7 +284,7 @@ function displayCategories(items) {
               <span class="price">${item.price || 0} <img src="img/ryal.png" style="width:25px;height:25px;vertical-align:middle;margin-left:5px;"></span>
               <div class="d-flex gap-2">
                 <a href="details.html?fId=${item.id}" class="btn btn-sm btn-outline-secondary">التفاصيل</a>
-                <button class="btn btn-sm btn-cart" onclick='addToCart(${encodeURIComponent(JSON.stringify(item))})'>
+                <button class="btn btn-sm btn-cart" onclick='addToCart(${JSON.stringify(item).replace(/"/g, "&quot;")})'>
                   <i class="bi bi-cart-plus"></i>
                 </button>
               </div>
@@ -330,10 +303,6 @@ function displayCategories(items) {
 // ======================
 // المنتجات الحديثة & الفلترة
 // ======================
-const contentContainer = document.getElementById("recentContent");
-const searchInput = document.getElementById("searchInput");
-const categoryFilter = document.getElementById("categoryFilter");
-
 function populateRecentFilter(items) {
   const categories = ["", "all", ...new Set(items.map(item => item.category?.trim()).filter(c => c))];
   categoryFilter.innerHTML = "";
@@ -361,7 +330,7 @@ function createRecentCard(item) {
           <span class="price">${item.price} <img src="img/ryal.png" style="width:25px;height:25px;vertical-align:middle;margin-left:5px;"></span>
           <div class="d-flex gap-2">
             <a href="details.html?fId=${item.id}" class="btn btn-sm btn-outline-secondary">التفاصيل</a>
-            <button class="btn btn-sm btn-cart" onclick='addToCart(${JSON.stringify(item)})'>
+            <button class="btn btn-sm btn-cart" onclick='addToCart(${JSON.stringify(item).replace(/"/g, "&quot;")})'>
               <i class="bi bi-cart-plus"></i>
             </button>
           </div>
@@ -381,7 +350,6 @@ function displayRecentItems(items, limitRandom = 6) {
 
   const selectedCategory = categoryFilter.value?.trim();
   let displayItems = [];
-
   if (!selectedCategory) {
     displayItems = [...items].sort(() => 0.5 - Math.random()).slice(0, limitRandom);
   } else if (selectedCategory === "all") {
@@ -389,7 +357,6 @@ function displayRecentItems(items, limitRandom = 6) {
   } else {
     displayItems = items.filter(item => item.category?.trim() === selectedCategory);
   }
-
   displayItems.forEach(item => createRecentCard(item));
 }
 
@@ -407,19 +374,49 @@ searchInput.addEventListener("input", filterItems);
 categoryFilter.addEventListener("change", filterItems);
 
 // ======================
-// إدارة السلة
+// إدارة السلة (موحدة مع صفحة التفاصيل)
 // ======================
-let cart = JSON.parse(localStorage.getItem('cart')) || [];
+function addToCart(productData) {
+  try {
+    const product = typeof productData === "string" ? JSON.parse(productData) : productData;
+    const productId = product.id;
+    const productTitle = product.food_name;
+    const price = parseFloat(product.price) || 0;
+    const productImage = product.images || "img/placeholder.png";
+    const quantity = 1;
 
-function addToCart(product) {
-  cart.push(product);
-  localStorage.setItem('cart', JSON.stringify(cart));
-  updateCartCount();
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let existing = cart.find(item => item.productId === productId);
+    if (existing) {
+      existing.quantity += quantity;
+    } else {
+      cart.push({ productId, productTitle, price, productImage, quantity });
+    }
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartCount();
+    showToastHome(`${productTitle} تمت إضافته للسلة ✅`);
+  } catch (err) {
+    console.error("خطأ في إضافة المنتج للسلة:", err, productData);
+  }
 }
 
 function updateCartCount() {
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  let total = cart.reduce((sum, item) => sum + item.quantity, 0);
   let cartCount = document.getElementById('cartCount');
-  if(cartCount) cartCount.textContent = cart.length;
+  if (cartCount) cartCount.textContent = total;
+}
+
+function showToastHome(message) {
+  let toast = document.createElement("div");
+  toast.className = "toast-home";
+  toast.innerText = message;
+  document.body.appendChild(toast);
+  setTimeout(() => toast.classList.add("show"), 100);
+  setTimeout(() => {
+    toast.classList.remove("show");
+    setTimeout(() => toast.remove(), 500);
+  }, 2500);
 }
 
 document.addEventListener('DOMContentLoaded', updateCartCount);
@@ -454,12 +451,3 @@ window.addEventListener('DOMContentLoaded', () => {
   loadItems();
   categoryFilter.value = "";
 });
-
-
-
-
-
-
-
-
-
