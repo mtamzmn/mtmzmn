@@ -1,3 +1,9 @@
+
+// توجيه المستخدم إلى صفحة السلة
+// ======================
+function goToCart() {
+  window.location.href = 'cart.html';
+}
 // ======================
 // إعدادات عامة
 // ======================
@@ -451,3 +457,4 @@ window.addEventListener('DOMContentLoaded', () => {
   loadItems();
   categoryFilter.value = "";
 });
+
