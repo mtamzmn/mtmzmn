@@ -444,55 +444,6 @@ async function loadCategoriesForNavbar() {
     console.error("خطأ في تحميل الفئات:", err);
   }
 }
-// ======================
-// إدارة السلة (موحدة مع صفحة التفاصيل)
-// ======================
-let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-function addToCart(productData) {
-  try {
-    // المنتج يأتي من الـ HTML كنص JSON
-    const product = typeof productData === "string" 
-      ? JSON.parse(productData) 
-      : productData;
-
-    const productId = product.id;
-    const productTitle = product.food_name;
-    const price = parseFloat(product.price) || 0;
-    const productImage = product.images || "img/placeholder.png";
-    const quantity = 1; // في الصفحة الرئيسية دائمًا 1 كبداية
-
-    // التحقق إذا المنتج موجود مسبقاً
-    let existing = cart.find(item => item.productId === productId);
-    if (existing) {
-      existing.quantity += quantity;
-    } else {
-      cart.push({
-        productId: productId,
-        productTitle: productTitle,
-        price: price,
-        productImage: productImage,
-        quantity: quantity
-      });
-    }
-
-    // تحديث التخزين
-    localStorage.setItem('cart', JSON.stringify(cart));
-    updateCartCount();
-  } catch (err) {
-    console.error("خطأ في إضافة المنتج للسلة:", err, productData);
-  }
-}
-
-function updateCartCount() {
-  let cartCount = document.getElementById('cartCount');
-  if (cartCount) {
-    let total = cart.reduce((sum, item) => sum + item.quantity, 0);
-    cartCount.textContent = total;
-  }
-}
-
-document.addEventListener('DOMContentLoaded', updateCartCount);
 
 // ======================
 // عند التحميل الكامل للصفحة
@@ -503,6 +454,7 @@ window.addEventListener('DOMContentLoaded', () => {
   loadItems();
   categoryFilter.value = "";
 });
+
 
 
 
