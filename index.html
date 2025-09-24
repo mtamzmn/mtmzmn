@@ -66,25 +66,6 @@
   height: 60px;
   animation: spin 1.5s linear infinite;
 }
-
-.custom-toast {
-  position: fixed;
-  top: -60px;
-  right: 20px;
-  background: #198754;
-  color: #fff;
-  padding: 12px 18px;
-  border-radius: 12px;
-  font-size: 14px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  z-index: 9999;
-  transition: all 0.5s ease;
-}
-.custom-toast.show {
-  top: 20px;
-}
-
-
 /* حركة الـ Loader */
 @keyframes spin {
   0% {
@@ -216,86 +197,10 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
-  <script>
-    // ======================
-// إدارة السلة - الصفحة الرئيسية
-// ======================
-let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-// إضافة للسلة من البطاقة
-function addToCart(productData) {
-  try {
-    // المنتج يأتي كنص JSON من HTML
-    const product = typeof productData === "string"
-      ? JSON.parse(productData)
-      : productData;
-
-    const productId = product.id;
-    const productTitle = product.food_name;
-    const price = parseFloat(product.price) || 0;
-    const productImage = product.images || "img/placeholder.png";
-    const quantity = 1; // الصفحة الرئيسية = إضافة 1 دائماً
-
-    // تحقق إذا موجود مسبقاً
-    let existing = cart.find(item => item.productId === productId);
-    if (existing) {
-      existing.quantity += quantity;
-    } else {
-      cart.push({
-        productId: productId,
-        productTitle: productTitle,
-        price: price,
-        productImage: productImage,
-        quantity: quantity
-      });
-    }
-
-    // حفظ في localStorage
-    localStorage.setItem("cart", JSON.stringify(cart));
-
-    // تحديث العداد
-    updateCartCount();
-
-    // إشعار نجاح
-    showToast(`${productTitle} تمت إضافته للسلة ✅`);
-  } catch (err) {
-    console.error("خطأ في إضافة المنتج للسلة:", err, productData);
-  }
-}
-
-// تحديث عداد السلة في الـ Navbar
-function updateCartCount() {
-  let cartCount = document.getElementById("cartCount");
-  if (cartCount) {
-    let total = cart.reduce((sum, item) => sum + item.quantity, 0);
-    cartCount.textContent = total;
-  }
-}
-
-// Toast (إشعار صغير أعلى الصفحة)
-function showToast(message) {
-  let toast = document.createElement("div");
-  toast.className = "custom-toast";
-  toast.innerText = message;
-
-  document.body.appendChild(toast);
-
-  setTimeout(() => {
-    toast.classList.add("show");
-  }, 100);
-
-  setTimeout(() => {
-    toast.classList.remove("show");
-    setTimeout(() => toast.remove(), 500);
-  }, 2500);
-}
-
-// عند تحميل الصفحة → تحديث العداد
-document.addEventListener("DOMContentLoaded", updateCartCount);
-  </script>
 </body>
 
 </html>
+
 
 
 
